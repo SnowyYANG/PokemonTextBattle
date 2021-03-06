@@ -1,0 +1,9 @@
+.vs
+obj
+bin
+/MyPBO
+/debug
+/server
+*.suo
+res/image.zip
+src/PBO/images
