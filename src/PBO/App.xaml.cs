@@ -29,7 +29,6 @@ namespace PokemonBattleOnline.PBO
         string.Empty
 #endif
         ;
-            ImageService.Load(r + "res\\image.zip");
             GameString.Load(r + "res", "zh", "en");
             UserData.Load(r + "MyPBO\\user.dat");
             Config.Load(r + "MyPBO\\config.xml");

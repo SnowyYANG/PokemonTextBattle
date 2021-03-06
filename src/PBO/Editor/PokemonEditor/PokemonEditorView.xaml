@@ -6,9 +6,6 @@
              xmlns:ui="clr-namespace:PokemonBattleOnline.PBO.Elements"
              xmlns:e="clr-namespace:PokemonBattleOnline.PBO.Editor"
              UseLayoutRounding="True" Width="460" MinHeight="365">
-    <UserControl.Background>
-        <ImageBrush TileMode="Tile" Viewport="0,0,7,7" ViewportUnits="Absolute" ImageSource="/PBO;component/images/PokemonSummaryBackground.png"/>
-    </UserControl.Background>
     <UserControl.Resources>
         <LinearGradientBrush x:Key="BgL" EndPoint="0.5,0" StartPoint="1,0">
             <GradientStop Color="#996f5347" Offset="0.5"/>

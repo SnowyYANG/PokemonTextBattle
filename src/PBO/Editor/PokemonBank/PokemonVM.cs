@@ -124,9 +124,9 @@ namespace PokemonBattleOnline.PBO.Editor
         }
 
         public ImageSource Icon
-        { get { return Model == null ? Index == 0 || Container[Index - 1].Model != null ? R.P00000 : null : ImageService.GetPokemonIcon(Model.Form, Model.Gender); } }
+        { get { return null; } }
         public ImageSource RIcon
-        { get { return Model == null ? null : ImageService.GetPokemonIcon(Model.Form, Model.Gender); } }
+        { get { return null; } }
 
         public bool IsRare
         {

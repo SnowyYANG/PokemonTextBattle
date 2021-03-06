@@ -79,33 +79,10 @@ namespace PokemonBattleOnline.PBO.Converters
   public class BattleTypeMoveButton : Converter<BattleType>
   {
     public static readonly BattleTypeMoveButton C = new BattleTypeMoveButton();
-    static readonly ImageSource[] c;
-    static BattleTypeMoveButton()
-    {
-      c = new ImageSource[RomData.BATTLETYPES + 1];
-      c[1] = Helper.GetImage(@"ControlPanel/Fight/Normal.png");
-      c[2] = Helper.GetImage(@"ControlPanel/Fight/Fighting.png");
-      c[3] = Helper.GetImage(@"ControlPanel/Fight/Flying.png");
-      c[4] = Helper.GetImage(@"ControlPanel/Fight/Poison.png");
-      c[5] = Helper.GetImage(@"ControlPanel/Fight/Ground.png");
-      c[6] = Helper.GetImage(@"ControlPanel/Fight/Rock.png");
-      c[7] = Helper.GetImage(@"ControlPanel/Fight/Bug.png");
-      c[8] = Helper.GetImage(@"ControlPanel/Fight/Ghost.png");
-      c[9] = Helper.GetImage(@"ControlPanel/Fight/Steel.png");
-      c[10] = Helper.GetImage(@"ControlPanel/Fight/Fire.png");
-      c[11] = Helper.GetImage(@"ControlPanel/Fight/Water.png");
-      c[12] = Helper.GetImage(@"ControlPanel/Fight/Grass.png");
-      c[13] = Helper.GetImage(@"ControlPanel/Fight/Electric.png");
-      c[14] = Helper.GetImage(@"ControlPanel/Fight/Psychic.png");
-      c[15] = Helper.GetImage(@"ControlPanel/Fight/Ice.png");
-      c[16] = Helper.GetImage(@"ControlPanel/Fight/Dragon.png");
-      c[17] = Helper.GetImage(@"ControlPanel/Fight/Dark.png");
-      c[18] = Helper.GetImage(@"ControlPanel/Fight/Fairy.png");
-    }
 
     protected override object Convert(BattleType value)
     {
-      return c[(int)value];
+      return null;
     }
   }
 }

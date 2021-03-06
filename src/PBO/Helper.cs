@@ -17,11 +17,6 @@ namespace PokemonBattleOnline.PBO
   {
     public static readonly Random Random = new Random();
 
-    public static BitmapImage GetImage(string filename)
-    {
-      return new BitmapImage(new Uri(@"pack://application:,,,/PBO;component/images/" + filename, UriKind.Absolute));
-    }
-
     internal static ResourceDictionary GetDictionary(string group, string name)
     {
       return (ResourceDictionary)Application.LoadComponent(

@@ -14,7 +14,6 @@
                     <RowDefinition Height="71"/>
                     <RowDefinition Height="40"/>
                 </Grid.RowDefinitions>
-                <ContentPresenter x:Name="avatar" MouseDown="avatar_MouseDown" ToolTip="点击选择头像..." Cursor="Hand" ContentTemplate="{x:Static ui:Cartes.Avatar}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="4,2,0,0"/>
                 <TextBox Name="name" Foreground="{Binding Text,RelativeSource={RelativeSource Self},Converter={x:Static c:UserColor.C}}" VerticalAlignment="Top" Margin="72,24,5,0" BorderThickness="0,0,0,1" BorderBrush="#6aacf0" FontSize="16" Background="{x:Null}" HorizontalContentAlignment="Center"/>
                 <TextBlock Text="{x:Static l:R.Username}" IsHitTestVisible="False" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="70,24,3,0" Foreground="#806aacf0">
                     <TextBlock.Style>
@@ -110,12 +109,5 @@
                 </ComboBox>
             </Grid>
         </Border>
-        <ListBox x:Name="avs" SelectedItem="{Binding ElementName=avatar,Path=Content}" ItemsSource="{x:Static c:IdAvatar.Avatars}" ItemTemplate="{x:Static ui:Cartes.Avatar}" SelectionChanged="avs_SelectionChanged" Visibility="Collapsed" ScrollViewer.HorizontalScrollBarVisibility="Disabled" Background="{x:Null}" BorderThickness="0" BorderBrush="{x:Null}">
-            <ListBox.ItemsPanel>
-                <ItemsPanelTemplate>
-                    <WrapPanel HorizontalAlignment="Center"/>
-                </ItemsPanelTemplate>
-            </ListBox.ItemsPanel>
-        </ListBox>
     </Grid>
 </UserControl>

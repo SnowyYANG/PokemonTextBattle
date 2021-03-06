@@ -53,31 +53,7 @@ namespace PokemonBattleOnline.PBO.Battle
 
         private void RefreshImage()
         {
-            var s = Pokemon.IsSubstitute ? Back ? ImageService.GetSpBack("substitute") : ImageService.GetSpFront("substitute") : Back ? ImageService.GetPokemonBack(Pokemon.Form, Pokemon.Gender, Pokemon.Shiny) : ImageService.GetPokemonFront(Pokemon.Form, Pokemon.Gender, Pokemon.Shiny);
-            if (s == null) s = ImageService.GetPokemonIcon(Pokemon.Form, Pokemon.Gender);
-            Image.Source = s;
-            if (s != null)
-            {
-                double scale;
-                var o = s.PixelHeight <= 96 || s.PixelHeight == 240 && s.PixelWidth < 320; //gen5 小图 非满下屏的图源为原始尺寸
-                if (Back && o)
-                {
-                    scale = 2;
-                    Image.SetValue(RenderOptions.BitmapScalingModeProperty, BitmapScalingMode.NearestNeighbor);
-                }
-                else if (!Back && !o)
-                {
-                    scale = 0.5;
-                    Image.SetValue(RenderOptions.BitmapScalingModeProperty, BitmapScalingMode.Fant);
-                }
-                else scale = 1;
-                Image.SetValue(Canvas.LeftProperty, -s.PixelWidth * scale / 2);
-                Image.SetValue(Canvas.BottomProperty, -s.PixelHeight * scale / 2);
-                Image.Width = s.PixelWidth * scale;
-                Image.Height = s.PixelHeight * scale;
-                FaintAnimation.From = Image.Height;
-            }
-            BeginChangeImageAnimation.To = Back ? 30 : 15;
+            
         }
         public void SendOut(PokemonOutward pm)
         {

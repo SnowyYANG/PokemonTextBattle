@@ -48,13 +48,6 @@ namespace PokemonBattleOnline.PBO.Lobby
                       }
                   }
               };
-            var av = Config.Current.Avatar;
-            if (av < 651 || av >= 868 || av == 790 || av == 856 || av == 857 || av == 858)
-            {
-                av = new Random().Next(651, 868);
-                if (av == 790 || av == 856 || av == 857 || av == 858) av = 821;
-            }
-            avatar.Content = av;
             var na = Config.Current.Name;
             if (na != null) name.Text = na;
             servers.ItemsSource = Config.Current.Servers;
@@ -71,27 +64,12 @@ namespace PokemonBattleOnline.PBO.Lobby
             if (!string.IsNullOrWhiteSpace(servers.Text) && !string.IsNullOrWhiteSpace(name.Text))
             {
                 var na = name.Text.Trim();
-                var av = (int)avatar.Content;
+                var av = 0;
                 PBOClient.Login(servers.Text.Trim(), na, (ushort)av);
                 Config.Current.Name = na;
                 Config.Current.Avatar = av;
                 IsEnabled = false;
             }
-        }
-
-        private void avs_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            if (avs.SelectedItem != null)
-            {
-                avs.Visibility = System.Windows.Visibility.Collapsed;
-                login.Visibility = System.Windows.Visibility.Visible;
-            }
-        }
-        private void avatar_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-            login.Visibility = System.Windows.Visibility.Collapsed;
-            avs.Visibility = System.Windows.Visibility.Visible;
-            avs.SelectedItem = null;
         }
     }
 }

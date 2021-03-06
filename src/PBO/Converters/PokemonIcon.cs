@@ -12,7 +12,7 @@ namespace PokemonBattleOnline.PBO.Converters
 
         protected override object Convert(SimPokemon value)
         {
-            return ImageService.GetPokemonIcon(value.Form, value.Gender);
+            return null;
         }
     }
     public class PokemonOutwardIcon : Converter<PokemonOutward>
@@ -21,7 +21,7 @@ namespace PokemonBattleOnline.PBO.Converters
 
         protected override object Convert(PokemonOutward value)
         {
-            return ImageService.GetPokemonIcon(value.Form, value.Gender);
+            return null;
         }
     }
     public class PokemonDataIcon : Converter<IPokemonData>
@@ -30,7 +30,7 @@ namespace PokemonBattleOnline.PBO.Converters
 
         protected override object Convert(IPokemonData value)
         {
-            return ImageService.GetPokemonIcon(value.Form, value.Gender);
+            return null;
         }
     }
     public class PokemonSpeciesIcon : Converter<PokemonSpecies>
@@ -39,7 +39,7 @@ namespace PokemonBattleOnline.PBO.Converters
 
         protected override object Convert(PokemonSpecies value)
         {
-            return ImageService.GetPokemonIcon(value.GetForm(0), value.Genders.First());
+            return null;
         }
     }
     public class PokemonFormIcon : Converter<PokemonForm>
@@ -48,7 +48,7 @@ namespace PokemonBattleOnline.PBO.Converters
 
         protected override object Convert(PokemonForm value)
         {
-            return ImageService.GetPokemonIcon(value, value.Species.Genders.First());
+            return null;
         }
     }
 }

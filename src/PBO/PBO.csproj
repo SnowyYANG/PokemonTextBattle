@@ -26,7 +26,8 @@
     <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>client.ico</ApplicationIcon>
+    <ApplicationIcon>
+    </ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
     <DebugSymbols>true</DebugSymbols>
@@ -99,10 +100,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="LobbyPanel.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Lobby\Chat.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -161,10 +158,6 @@
       <DependentUpon>EvBox.xaml</DependentUpon>
     </Compile>
     <Compile Include="Elements\Controls\LimitedValueRule.cs" />
-    <Compile Include="LobbyPanel.xaml.cs">
-      <SubType>Code</SubType>
-      <DependentUpon>LobbyPanel.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Lobby\Chat.xaml.cs">
       <DependentUpon>Chat.xaml</DependentUpon>
     </Compile>
@@ -209,9 +202,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="client.ico" />
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="Elements\SBrushes.cs" />
     <Compile Include="Elements\Cartes\Cartes.cs" />
     <Compile Include="Config.cs" />
@@ -224,12 +214,10 @@
     <Compile Include="Converters\BattleType.cs" />
     <Compile Include="Converters\Converter.cs" />
     <Compile Include="Converters\IntString.cs" />
-    <Compile Include="Converters\IdAvatar.cs" />
     <Compile Include="Converters\PokemonIcon.cs" />
     <Compile Include="Converters\MoveCategory.cs" />
     <Compile Include="Converters\PP.cs" />
     <Compile Include="Helper.cs" />
-    <Compile Include="ImageService.cs" />
     <Compile Include="Elements\Labels\Labels.cs" />
     <Compile Include="Elements\ShowMessageBox.cs" />
     <Page Include="Elements\Cartes\User.xaml">
@@ -330,10 +318,6 @@
     <Compile Include="Editor\R.cs" />
     <Compile Include="Editor\PokemonEditor\LearnMethod.cs" />
     <Compile Include="Editor\PokemonBank\TeamVM.cs" />
-    <Page Include="EditorPanel.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Compile Include="Converters\IdMoveC.cs" />
     <Compile Include="Editor\PokemonEditor\PokemonEditorVM.cs" />
     <Compile Include="Editor\PokemonEditor\PokemonEditorView.xaml.cs">
@@ -342,9 +326,6 @@
     <Compile Include="Editor\EditorVM.cs" />
     <Compile Include="Editor\PokemonEditor\LearnVM.cs" />
     <Compile Include="Editor\PokemonBank\PokemonVM.cs" />
-    <Compile Include="EditorPanel.xaml.cs">
-      <DependentUpon>EditorPanel.xaml</DependentUpon>
-    </Compile>
     <Page Include="Editor\PokemonEditor\PokemonEditorView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -358,135 +339,7 @@
     <Compile Include="Lobby\R.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="images\Item.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="images\UpperScreen\Terrains\wifi.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="images\000.00.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="images\PokemonState\bPSN.png" />
-    <Resource Include="images\PokemonState\BRN.png" />
-    <Resource Include="images\PokemonState\FRZ.png" />
-    <Resource Include="images\PokemonState\PAR.png" />
-    <Resource Include="images\PokemonState\PSN.png" />
-    <Resource Include="images\PokemonState\SLP.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="images\MoveCategory\Physical.png" />
-    <Resource Include="images\MoveCategory\Special.png" />
-    <Resource Include="images\MoveCategory\Status.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="images\UpperScreen\StateBar\Female.png" />
-    <Resource Include="images\UpperScreen\StateBar\Male.png" />
-    <Resource Include="images\UpperScreen\StateBar\Mega.png" />
-    <Resource Include="images\UpperScreen\StateBar\Pokemon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="images\UpperScreen\StateBar\Abnormal.png" />
-    <Resource Include="images\UpperScreen\StateBar\Faint.png" />
-    <Resource Include="images\UpperScreen\StateBar\Normal.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="images\UpperScreen\StateBar\Team.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="images\ControlPanel\Pokemon\Hp.png" />
-    <Resource Include="images\ControlPanel\Pokemon\Button.png" />
-    <Resource Include="images\ControlPanel\Return.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="images\ControlPanel\Fight\Bug.png" />
-    <Resource Include="images\ControlPanel\Fight\Dark.png" />
-    <Resource Include="images\ControlPanel\Fight\Dragon.png" />
-    <Resource Include="images\ControlPanel\Fight\Electric.png" />
-    <Resource Include="images\ControlPanel\Fight\Fairy.png" />
-    <Resource Include="images\ControlPanel\Fight\Fighting.png" />
-    <Resource Include="images\ControlPanel\Fight\Fire.png" />
-    <Resource Include="images\ControlPanel\Fight\Flying.png" />
-    <Resource Include="images\ControlPanel\Fight\Ghost.png" />
-    <Resource Include="images\ControlPanel\Fight\Grass.png" />
-    <Resource Include="images\ControlPanel\Fight\Ground.png" />
-    <Resource Include="images\ControlPanel\Fight\Ice.png" />
-    <Resource Include="images\ControlPanel\Fight\Normal.png" />
-    <Resource Include="images\ControlPanel\Fight\Poison.png" />
-    <Resource Include="images\ControlPanel\Fight\Psychic.png" />
-    <Resource Include="images\ControlPanel\Fight\Rock.png" />
-    <Resource Include="images\ControlPanel\Fight\Steel.png" />
-    <Resource Include="images\ControlPanel\Fight\Water.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="images\ControlPanel\Fight\MegaF.png" />
-    <Resource Include="images\ControlPanel\Fight\MegaT.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="images\ControlPanel\Fight.png" />
-    <Resource Include="images\ControlPanel\MainMenu.png" />
-    <Resource Include="images\Subtitle.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="images\UpperScreen\StateBar\HpGreen.png" />
-    <Resource Include="images\UpperScreen\StateBar\HpRed.png" />
-    <Resource Include="images\UpperScreen\StateBar\HpYellow.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="images\ControlPanel\Pokemon\HpGreen.png" />
-    <Resource Include="images\ControlPanel\Pokemon\HpYellow.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="images\ControlPanel\Pokemon\HpRed.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="images\PokemonState\FNT.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="images\ControlPanel\Pokemon\FaintButton.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="images\ControlPanel\Background.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="images\ControlPanel\Pokemon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="images\PokemonSummaryBackground.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="images\PokemonBankBackground1.png" />
-    <Resource Include="images\PokemonBankBackground2.png" />
-    <Resource Include="images\PokemonBankBackground3.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="images\ControlPanel\BackgroundD.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="images\ControlPanel\Fight\Background.png" />
-    <Resource Include="images\ControlPanel\Fight\BackgroundMega.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="images\challenged.wav" />
-    <Resource Include="images\chat.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="images\UpperScreen\StateBar\Alpha.png" />
-    <Resource Include="images\UpperScreen\StateBar\Omega.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="images\ControlPanel\Run.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="images\ControlPanel\Pokemon\Partner.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="images\ControlPanel\No.png" />
-    <Resource Include="images\ControlPanel\Yes.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="images\ControlPanel\Fight\Opponent.png" />
-    <Resource Include="images\ControlPanel\Fight\Team.png" />
+    <Resource Include="chat.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

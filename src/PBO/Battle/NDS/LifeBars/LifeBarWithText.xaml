@@ -4,9 +4,9 @@
         xmlns:ui="clr-namespace:PokemonBattleOnline.PBO.Elements"
         DataContextChanged="LifeBar_DataContextChanged" Width="48">
     <Canvas.Resources>
-        <ImageBrush x:Key="Green" TileMode="Tile" Viewport="0,0,1,4" ViewportUnits="Absolute" ImageSource="/PBO;component/images/UpperScreen/StateBar/HpGreen.png"/>
-        <ImageBrush x:Key="Yellow" TileMode="Tile" Viewport="0,0,1,4" ViewportUnits="Absolute" ImageSource="/PBO;component/images/UpperScreen/StateBar/HpYellow.png"/>
-        <ImageBrush x:Key="Red" TileMode="Tile" Viewport="0,0,1,4" ViewportUnits="Absolute" ImageSource="/PBO;component/images/UpperScreen/StateBar/HpRed.png"/>
+        <ImageBrush x:Key="Green" TileMode="Tile" Viewport="0,0,1,4" ViewportUnits="Absolute"/>
+        <ImageBrush x:Key="Yellow" TileMode="Tile" Viewport="0,0,1,4" ViewportUnits="Absolute"/>
+        <ImageBrush x:Key="Red" TileMode="Tile" Viewport="0,0,1,4" ViewportUnits="Absolute"/>
     </Canvas.Resources>
     <Rectangle Name="Bar" Height="4" Stroke="{x:Null}" StrokeThickness="0"/>
     <Label Content="/" Style="{x:Static ui:Controls.STextBlock}" FontSize="10" FontWeight="Bold" Canvas.Left="19" Canvas.Top="6"/>

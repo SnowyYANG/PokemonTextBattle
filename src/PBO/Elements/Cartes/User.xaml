@@ -12,18 +12,13 @@
     <SolidColorBrush x:Key="Gray" Color="#807878"/>
     <SolidColorBrush x:Key="White" Color="#c0c0c0"/>
     <SolidColorBrush x:Key="Pink" Color="#f07070"/>
-    <DataTemplate x:Key="Avatar">
-        <Image Source="{Binding Converter={x:Static c:IdAvatar.C}}" Height="64" Width="64"/>
-    </DataTemplate>
     <DataTemplate x:Key="User">
         <Grid Height="32" Width="128" Margin="1" Name="grid" Background="Transparent">
-            <Image Source="{Binding Avatar,Converter={x:Static c:IdAvatar.C}}" Height="32" Width="32" HorizontalAlignment="Left" VerticalAlignment="Top"/>
             <TextBlock Text="{Binding Name}" Foreground="{Binding Name,Converter={x:Static c:UserColor.C}}" Margin="35,2,0,0" HorizontalAlignment="Left" VerticalAlignment="Center"/>
         </Grid>
     </DataTemplate>
     <DataTemplate x:Key="UserR">
         <Grid Height="32" Width="128" Margin="1" Name="grid" Background="Transparent">
-            <Image Source="{Binding Avatar,Converter={x:Static c:IdAvatar.C}}" Height="32" Width="32" HorizontalAlignment="Right" VerticalAlignment="Top"/>
             <TextBlock Text="{Binding Name}" Foreground="{Binding Name,Converter={x:Static c:UserColor.C}}" Margin="0,2,35,0" HorizontalAlignment="Right" VerticalAlignment="Center"/>
         </Grid>
     </DataTemplate>

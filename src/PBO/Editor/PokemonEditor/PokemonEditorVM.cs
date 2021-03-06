@@ -312,12 +312,6 @@ namespace PokemonBattleOnline.PBO.Editor
         { get { return _image; } }
         private void RefreshImage()
         {
-            var value = ImageService.GetPokemonFront(Model.Form, Model.Gender, false);
-            if (_image != value)
-            {
-                _image = value;
-                OnPropertyChanged("Image");
-            }
         }
 
         private Visibility _hiddenPowerVisibility;

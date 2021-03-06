@@ -3,8 +3,8 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         DataContextChanged="LifeBar_DataContextChanged" Height="4">
     <Canvas.Resources>
-        <ImageBrush x:Key="Green" TileMode="Tile" Viewport="0,0,1,4" ViewportUnits="Absolute" ImageSource="/PBO;component/images/UpperScreen/StateBar/HpGreen.png"/>
-        <ImageBrush x:Key="Yellow" TileMode="Tile" Viewport="0,0,1,4" ViewportUnits="Absolute" ImageSource="/PBO;component/images/UpperScreen/StateBar/HpYellow.png"/>
-        <ImageBrush x:Key="Red" TileMode="Tile" Viewport="0,0,1,4" ViewportUnits="Absolute" ImageSource="/PBO;component/images/UpperScreen/StateBar/HpRed.png"/>
+        <ImageBrush x:Key="Green" TileMode="Tile" Viewport="0,0,1,4" ViewportUnits="Absolute"/>
+        <ImageBrush x:Key="Yellow" TileMode="Tile" Viewport="0,0,1,4" ViewportUnits="Absolute"/>
+        <ImageBrush x:Key="Red" TileMode="Tile" Viewport="0,0,1,4" ViewportUnits="Absolute"/>
     </Canvas.Resources>
 </Canvas>

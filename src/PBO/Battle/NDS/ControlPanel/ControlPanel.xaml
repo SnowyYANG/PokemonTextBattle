@@ -12,7 +12,6 @@
             </Style>
             <Style x:Key="ReturnButton" TargetType="b:GameButton">
                 <EventSetter Event="Click" Handler="Return_Click"/>
-                <Setter Property="Image" Value="/PBO;component/images/ControlPanel/Return.png"/>
                 <Setter Property="Shape" Value="M3,47 A44,44 120 0 1 67,7 V47 Z"/>
                 <Setter Property="Padding" Value="2,2,0,0"/>
                 <Setter Property="Width" Value="67"/>
@@ -24,14 +23,10 @@
             </Style>
         </TabControl.Resources>
         <TabItem>
-            <Image Height="240" Width="320" Source="/PBO;component/images/ControlPanel/BackgroundD.png"/>
         </TabItem>
         <TabItem>
             <Canvas>
-                <Canvas.Background>
-                    <ImageBrush ImageSource="/PBO;component/images/ControlPanel/MainMenu.png"/>
-                </Canvas.Background>
-                <b:GameButton Click="Fight_Click" Padding="2,1" Shape="M113,0 A113,70 180 1 1 113,140 A113,70 180 1 1 113,0 Z" Image="/PBO;component/images/ControlPanel/Fight.png" Width="226" Height="140" Canvas.Left="47" Canvas.Top="34"/>
+                <b:GameButton Click="Fight_Click" Padding="2,1" Shape="M113,0 A113,70 180 1 1 113,140 A113,70 180 1 1 113,0 Z" Width="226" Height="140" Canvas.Left="47" Canvas.Top="34"/>
                 <Grid Width="320" Height="32" IsHitTestVisible="False" Canvas.Top="120">
                     <ListBox SelectedItem="{Binding ControllingPokemon.Pokemon,Mode=OneWay}" ItemsSource="{Binding OnboardPokemons}" ScrollViewer.VerticalScrollBarVisibility="Hidden" Background="{x:Null}" BorderBrush="{x:Null}" BorderThickness="0" Margin="-1" HorizontalAlignment="Center">
                         <ListBox.ItemsPanel>
@@ -59,8 +54,8 @@
                         </ListBox.ItemContainerStyle>
                     </ListBox>
                 </Grid>
-                <b:GameButton Click="Pokemons_Click" Padding="1,1,0,0" Shape="M1,63 A58,58 120 0 1 90,11 V63 Z" Image="/PBO;component/images/ControlPanel/Pokemon.png" Width="90" Height="63" Canvas.Bottom="0" Canvas.Right="0"/>
-                <b:GameButton Click="Run_Click" Padding="1,1,1,0" Shape="M0,50 A49,49 180 0 1 98,50 Z" Image="/PBO;component/images/ControlPanel/Run.png" Height="50" Width="98" Canvas.Bottom="0" Canvas.Left="110"/>
+                <b:GameButton Click="Pokemons_Click" Padding="1,1,0,0" Shape="M1,63 A58,58 120 0 1 90,11 V63 Z" Width="90" Height="63" Canvas.Bottom="0" Canvas.Right="0"/>
+                <b:GameButton Click="Run_Click" Padding="1,1,1,0" Shape="M0,50 A49,49 180 0 1 98,50 Z" Height="50" Width="98" Canvas.Bottom="0" Canvas.Left="110"/>
             </Canvas>
         </TabItem>
         <TabItem>
@@ -100,7 +95,6 @@
                         </Setter>
                         <Style.Triggers>
                             <Trigger Property="Content" Value="{x:Null}">
-                                <Setter Property="Image" Value="/PBO;component/images/ControlPanel/Fight/Normal.png"/>
                                 <Setter Property="IsEnabled" Value="False"/>
                                 <Setter Property="ContentTemplate" Value="{x:Null}"/>
                             </Trigger>
@@ -141,7 +135,6 @@
                         </Setter>
                         <Style.Triggers>
                             <Trigger Property="Content" Value="{x:Null}">
-                                <Setter Property="Image" Value="/PBO;component/images/ControlPanel/Fight/Normal.png"/>
                                 <Setter Property="IsEnabled" Value="False"/>
                                 <Setter Property="ContentTemplate" Value="{x:Null}"/>
                             </Trigger>
@@ -150,18 +143,8 @@
                 </Grid.Resources>
                 <Grid.Style>
                     <Style TargetType="Grid">
-                        <Setter Property="Background">
-                            <Setter.Value>
-                                <ImageBrush ImageSource="/PBO;component/images/ControlPanel/Fight/Background.png"/>
-                            </Setter.Value>
-                        </Setter>
                         <Style.Triggers>
                             <DataTrigger Binding="{Binding Mega}" Value="True">
-                                <Setter Property="Background">
-                                    <Setter.Value>
-                                        <ImageBrush ImageSource="/PBO;component/images/ControlPanel/Fight/BackgroundMega.png"/>
-                                    </Setter.Value>
-                                </Setter>
                             </DataTrigger>
                         </Style.Triggers>
                     </Style>
@@ -175,12 +158,11 @@
                     <ToggleButton.Template>
                         <ControlTemplate TargetType="ToggleButton">
                             <Grid>
-                                <Image Name="main" IsHitTestVisible="False" Source="/PBO;component/images/ControlPanel/Fight/MegaF.png"/>
+                                <Image Name="main" IsHitTestVisible="False"/>
                                 <Ellipse Fill="Transparent" Margin="14,36,0,0" Width="114" Height="114" IsHitTestVisible="True"/>
                             </Grid>
                             <ControlTemplate.Triggers>
                                 <Trigger Property="IsChecked" Value="True">
-                                    <Setter TargetName="main" Property="Source" Value="/PBO;component/images/ControlPanel/Fight/MegaT.png"/>
                                 </Trigger>
                             </ControlTemplate.Triggers>
                         </ControlTemplate>
@@ -193,7 +175,6 @@
                 <Canvas.Resources>
                     <Style x:Key="O" TargetType="b:GameButton">
                         <EventSetter Event="Click" Handler="Target_Click"/>
-                        <Setter Property="Image" Value="/PBO;component/images/ControlPanel/Fight/Opponent.png"/>
                         <Setter Property="Shape" Value="M21.5,0 H53.5 A21.5,21.5 180 1 1 53.5,43 H21.5 A21.5,21.5 180 1 1 21.5,0Z"/>
                         <Setter Property="Padding" Value="2,1"/>
                         <Setter Property="Width" Value="75"/>
@@ -214,7 +195,6 @@
                     </Style>
                     <Style x:Key="T" TargetType="b:GameButton">
                         <EventSetter Event="Click" Handler="Target_Click"/>
-                        <Setter Property="Image" Value="/PBO;component/images/ControlPanel/Fight/Team.png"/>
                         <Setter Property="Shape" Value="M21.5,0 H53.5 A21.5,21.5 180 1 1 53.5,43 H21.5 A21.5,21.5 180 1 1 21.5,0Z"/>
                         <Setter Property="Padding" Value="2,1"/>
                         <Setter Property="Width" Value="75"/>
@@ -247,9 +227,6 @@
                         <Setter Property="IsHitTestVisible" Value="False"/>
                     </Style>
                 </Canvas.Resources>
-                <Canvas.Background>
-                    <ImageBrush ImageSource="/PBO;component/images/ControlPanel/Fight/Background.png"/>
-                </Canvas.Background>
                 <Line Visibility="{Binding VO1O0}" X1="119" Y1="75" X2="204" Y2="75"/>
                 <Line Visibility="{Binding V01}" X1="119" Y1="150" X2="204" Y2="150"/>
                 <Line Visibility="{Binding V0O1}" X1="82" Y1="96" X2="82" Y2="128"/>
@@ -267,9 +244,6 @@
         </TabItem>
         <TabItem>
             <Canvas>
-                <Canvas.Background>
-                    <ImageBrush ImageSource="/PBO;component/images/ControlPanel/Background.png"/>
-                </Canvas.Background>
                 <Border Background="#80000000" BorderThickness="2" CornerRadius="12" Canvas.Left="-15" Canvas.Top="204" Width="272" Height="24">
                     <Border.Effect>
                         <BlurEffect/>
@@ -283,7 +257,6 @@
                             <EventSetter Event="Click" Handler="Pokemon_Click"/>
                             <Setter Property="Width" Value="160"/>
                             <Setter Property="Height" Value="54"/>
-                            <Setter Property="Image" Value="/PBO;component/images/ControlPanel/Pokemon/Button.png"/>
                             <Setter Property="Shape" Value="M0,0 H135 A25,25 180 1 1 135,50 H0 Z"/>
                             <Setter Property="Padding" Value="0,1,1,1"/>
                             <Setter Property="ContentTemplate">
@@ -297,7 +270,7 @@
                                                 </Style>
                                             </Canvas.Resources>
                                             <Image Source="{Binding Converter={x:Static c:SimPokemonIcon.C}}" Height="30" Width="40" SnapsToDevicePixels="True" Canvas.Left="-1" Canvas.Top="4"/>
-                                            <Image Name="item" Stretch="Uniform" Source="/PBO;component/images/Item.png" Width="8" Height="10" Canvas.Left="28" Canvas.Top="26" SnapsToDevicePixels="True" />
+                                            <Image Name="item" Stretch="Uniform" Width="8" Height="10" Canvas.Left="28" Canvas.Top="26" SnapsToDevicePixels="True" />
                                             <TextBlock Text="{Binding Name}" Foreground="Black" FontSize="14" Width="54" Canvas.Left="39" Canvas.Top="9"/>
                                             <ContentPresenter Content="{Binding Gender}" ContentTemplate="{x:Static ui:Labels.Gender}" Canvas.Left="139" Canvas.Top="9"/>
                                             <b:LifeBarSimplified DataContext="{Binding Hp}" Canvas.Left="56" Canvas.Top="27"/>
@@ -322,7 +295,6 @@
                             </Setter>
                             <Style.Triggers>
                                 <DataTrigger Binding="{Binding Content.Hp.Value,RelativeSource={RelativeSource Self}}" Value="0">
-                                    <Setter Property="Image" Value="/PBO;component/images/ControlPanel/Pokemon/FaintButton.png"/>
                                 </DataTrigger>
                                 <Trigger Property="Content" Value="{x:Null}">
                                     <Setter Property="IsEnabled" Value="False"/>
@@ -331,7 +303,6 @@
                             </Style.Triggers>
                         </Style>
                         <Style x:Key="PL" TargetType="b:GameButton" BasedOn="{StaticResource L}">
-                            <Setter Property="Image" Value="/PBO;component/images/ControlPanel/Pokemon/Partner.png"/>
                         </Style>
                     </b:GameButton.Resources>
                 </b:GameButton>
@@ -343,7 +314,6 @@
                             <Setter Property="Padding" Value="1,1,0,1"/>
                             <Setter Property="Width" Value="160"/>
                             <Setter Property="Height" Value="54"/>
-                            <Setter Property="Image" Value="/PBO;component/images/ControlPanel/Pokemon/Button.png"/>
                             <Setter Property="Shape" Value="M0,0 H135 A25,25 180 1 1 135,50 H0 Z"/>
                             <Setter Property="HorizontalFlip" Value="True"/>
                             <Setter Property="ContentTemplate">
@@ -357,7 +327,7 @@
                                                 </Style>
                                             </Canvas.Resources>
                                             <Image Source="{Binding Converter={x:Static c:SimPokemonIcon.C}}" Height="30" Width="40" SnapsToDevicePixels="True" Canvas.Left="-1" Canvas.Top="6"/>
-                                            <Image Name="item" Stretch="Uniform" Source="/PBO;component/images/Item.png" Width="8" Height="10" Canvas.Left="28" Canvas.Top="26" SnapsToDevicePixels="True" />
+                                            <Image Name="item" Stretch="Uniform" Width="8" Height="10" Canvas.Left="28" Canvas.Top="26" SnapsToDevicePixels="True" />
                                             <TextBlock Text="{Binding Name}" Foreground="Black" FontSize="14" Width="54" Canvas.Left="39" Canvas.Top="9"/>
                                             <ContentPresenter Content="{Binding Gender}" ContentTemplate="{x:Static ui:Labels.Gender}" Canvas.Left="139" Canvas.Top="9"/>
                                             <b:LifeBarSimplified DataContext="{Binding Hp}" Canvas.Left="56" Canvas.Top="27"/>
@@ -382,7 +352,6 @@
                             </Setter>
                             <Style.Triggers>
                                 <DataTrigger Binding="{Binding Content.Hp.Value,RelativeSource={RelativeSource Self}}" Value="0">
-                                    <Setter Property="Image" Value="/PBO;component/images/ControlPanel/Pokemon/FaintButton.png"/>
                                 </DataTrigger>
                                 <Trigger Property="Content" Value="{x:Null}">
                                     <Setter Property="IsEnabled" Value="False"/>
@@ -391,7 +360,6 @@
                             </Style.Triggers>
                         </Style>
                         <Style x:Key="PR" TargetType="b:GameButton" BasedOn="{StaticResource R}">
-                            <Setter Property="Image" Value="/PBO;component/images/ControlPanel/Pokemon/Partner.png"/>
                         </Style>
                     </b:GameButton.Resources>
                 </b:GameButton>
@@ -403,9 +371,6 @@
         </TabItem>
         <TabItem>
             <Grid>
-                <Grid.Background>
-                    <ImageBrush ImageSource="/PBO;component/images/ControlPanel/Background.png"/>
-                </Grid.Background>
                 <Grid.Resources>
                     <Style TargetType="b:GameButton">
                         <Setter Property="Shape" Value="M18.5,0 H261.5 A18.5,18.5 180 1 1 261.5,37 H18.5 A18.5,18.5 180 1 1 18.5,0Z"/>
@@ -431,8 +396,8 @@
                         </LinearGradientBrush>
                     </Rectangle.Fill>
                 </Rectangle>
-                <b:GameButton Image="/PBO;component/images/ControlPanel/Yes.png" Content="是" Click="GiveUp_Click" Margin="20,90,20,0"/>
-                <b:GameButton Image="/PBO;component/images/ControlPanel/No.png" Content="否" Click="Return_Click" Margin="20,160,20,0"/>
+                <b:GameButton Content="是" Click="GiveUp_Click" Margin="20,90,20,0"/>
+                <b:GameButton Content="否" Click="Return_Click" Margin="20,160,20,0"/>
             </Grid>
         </TabItem>
     </TabControl>
@@ -517,7 +482,7 @@
 
                         <Label Content="{Binding Ability,Converter={x:Static c:AbilityString.C}}" Width="146" Canvas.Left="2" Canvas.Top="33"/>
                         <TextBlock Text="{Binding Ability,Converter={x:Static c:AbilityDString.C}}" TextWrapping="Wrap" Canvas.Left="18" Canvas.Top="49" Height="32" Width="133"/>
-                        <Image x:Name="itemImage" Source="/PBO;component/images/Item.png" Width="6" Height="9" Canvas.Left="13" Canvas.Top="95"/>
+                        <Image x:Name="itemImage" Width="6" Height="9" Canvas.Left="13" Canvas.Top="95"/>
                         <TextBlock x:Name="itemText" Text="{Binding Item,Converter={x:Static c:ItemString.C}}" Canvas.Left="36" Canvas.Top="89" />
                         <TextBlock Text="{Binding FiveD.Atk}" Canvas.Right="9" Canvas.Top="33"/>
                         <TextBlock Text="{Binding FiveD.Def}" Canvas.Right="9" Canvas.Top="49"/>

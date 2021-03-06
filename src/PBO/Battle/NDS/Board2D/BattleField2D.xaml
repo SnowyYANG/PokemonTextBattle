@@ -4,9 +4,6 @@
              xmlns:my="clr-namespace:PokemonBattleOnline.PBO.Battle"
              xmlns:ui="clr-namespace:PokemonBattleOnline.PBO.Elements"
              Height="240" Width="400" UseLayoutRounding="True" SnapsToDevicePixels="True" ClipToBounds="True" RenderOptions.BitmapScalingMode="NearestNeighbor">
-    <UserControl.Background>
-        <ImageBrush ImageSource="/PBO;component/images/UpperScreen/Terrains/wifi.png"/>
-    </UserControl.Background>
     <UserControl.Resources>
         <Style TargetType="ItemsControl">
             <Setter Property="ItemsPanel">
@@ -22,13 +19,10 @@
                         <Image x:Name="img" Width="14" Height="14"/>
                         <DataTemplate.Triggers>
                             <DataTrigger Binding="{Binding}" Value="Normal">
-                                <Setter TargetName="img" Property="Source" Value="/PBO;component/images/UpperScreen/StateBar/Normal.png"/>
                             </DataTrigger>
                             <DataTrigger Binding="{Binding}" Value="Abnormal">
-                                <Setter TargetName="img" Property="Source" Value="/PBO;component/images/UpperScreen/StateBar/Abnormal.png"/>
                             </DataTrigger>
                             <DataTrigger Binding="{Binding}" Value="Faint">
-                                <Setter TargetName="img" Property="Source" Value="/PBO;component/images/UpperScreen/StateBar/Faint.png"/>
                             </DataTrigger>
                         </DataTemplate.Triggers>
                     </DataTemplate>
@@ -43,7 +37,7 @@
         <my:Pokemon2D x:Name="P1" Canvas.Left="218" Canvas.Top="200"/>
         <StackPanel Orientation="Horizontal" Width="93" Canvas.Right="0" Canvas.Top="30">
             <StackPanel.Background>
-                <ImageBrush ImageSource="/PBO;component/images/UpperScreen/StateBar/Team.png">
+                <ImageBrush>
                     <ImageBrush.Transform>
                         <MatrixTransform>
                             <MatrixTransform.Matrix>
@@ -57,9 +51,6 @@
             <ItemsControl Name="PlayerO0"/>
         </StackPanel>
         <StackPanel Orientation="Horizontal" Width="93" Canvas.Top="169">
-            <StackPanel.Background>
-                <ImageBrush ImageSource="/PBO;component/images/UpperScreen/StateBar/Team.png"/>
-            </StackPanel.Background>
             <ItemsControl Name="Player0" Margin="2,0,0,0"/>
             <ItemsControl Name="Player1"/>
         </StackPanel>
