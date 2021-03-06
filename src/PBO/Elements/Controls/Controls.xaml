@@ -35,7 +35,6 @@
         </Setter>
     </Style>
     <Style x:Key="STextBlock" TargetType="Label">
-        <Setter Property="FontFamily" Value="SimSun"/>
         <Setter Property="FontSize" Value="11"/>
         <Setter Property="Background" Value="Black"/>
         <Setter Property="Template">

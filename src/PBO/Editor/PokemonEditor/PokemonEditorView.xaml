@@ -240,7 +240,7 @@
                 <ui:NumericUpdown Value="{Binding SpDef}"/>
                 <ui:NumericUpdown Value="{Binding Speed}"/>
             </StackPanel>
-            <ContentControl Visibility="{Binding HiddenPowerVisibility}" Content="{Binding HiddenPowerType}" ContentTemplate="{x:Static ui:Labels.BattleType}" Width="48" ToolTip="觉醒力量" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Right" Margin="0,0,8,0"/>
+            <ContentControl Visibility="{Binding HiddenPowerVisibility}" Content="{Binding HiddenPowerType}" ContentTemplate="{StaticResource BattleType}" Width="48" ToolTip="觉醒力量" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Right" Margin="0,0,8,0"/>
         </Grid>
         <Grid Visibility="{Binding Visibility,ElementName=R6D}" Margin="15,12,15,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="160">
             <Grid.RowDefinitions>
@@ -336,8 +336,8 @@
                 </ComboBox>
             </Grid>
             <Label Content="属性" Background="{StaticResource BgL}" Grid.Row="3"/>
-            <ContentPresenter Content="{Binding PokemonForm.Type1}" ContentTemplate="{x:Static ui:Labels.BattleType}" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="3" Margin="45,0,0,0"/>
-            <ContentPresenter Content="{Binding PokemonForm.Type2}" ContentTemplate="{x:Static ui:Labels.BattleType}" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="3" Margin="94,0,0,0"/>
+            <ContentPresenter Content="{Binding PokemonForm.Type1}" ContentTemplate="{StaticResource BattleType}" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="3" Margin="45,0,0,0"/>
+            <ContentPresenter Content="{Binding PokemonForm.Type2}" ContentTemplate="{StaticResource BattleType}" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="3" Margin="94,0,0,0"/>
         </Grid>
         <Grid Visibility="{Binding Visibility,ElementName=R6D}" Margin="50,130,15,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="140">
             <Grid.RowDefinitions>
@@ -371,7 +371,7 @@
                                         </Border.Background>
                                         <Grid Name="grid" Margin="5,0,0,0" ToolTip="{Binding Move.Id,Converter={x:Static c:MoveDString.C}}">
                                             <ContentControl Content="{Binding Move.Id,Converter={x:Static c:MoveString.C}}" VerticalAlignment="Top" Style="{x:Null}" Margin="8,0,0,0"/>
-                                            <ContentPresenter Content="{Binding Move.Type}" ContentTemplate="{x:Static ui:Labels.BattleType}" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="0,0,0,-1"/>
+                                            <ContentPresenter Content="{Binding Move.Type}" ContentTemplate="{StaticResource BattleType}" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="0,0,0,-1"/>
                                             <TextBlock Name="pp" Text="PP" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,30,1"/>
                                             <TextBlock Text="{Binding PP}" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,10,1"/>
                                             <Button Name="ppUp" Command="{x:Static e:PokemonEditorVM.PPUpChangeCommand}" CommandParameter="{Binding}" Cursor="Hand" Style="{x:Static ui:Controls.XButton}" Content="↑" ToolTip="PP上升+1" Foreground="#a0a0a0" FontSize="12" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,3,1"/>
@@ -455,7 +455,7 @@
                         </GridViewColumn.Header>
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <ContentPresenter Content="{Binding Move.Type}" ContentTemplate="{x:Static ui:Labels.BattleType}"/>
+                                <ContentPresenter Content="{Binding Move.Type}" ContentTemplate="{StaticResource BattleType}"/>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
@@ -466,14 +466,14 @@
                         </GridViewColumn.Header>
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <ContentPresenter Content="{Binding Move.Category}" ContentTemplate="{x:Static ui:Labels.MoveCategory}"/>
+                                <ContentPresenter Content="{Binding Move.Category}" ContentTemplate="{StaticResource MoveCategory}"/>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
                     <GridViewColumn Header="威力" Width="40" DisplayMemberBinding="{Binding Move.Power, Converter={x:Static c:PowerString.C}}"/>
                     <GridViewColumn Header="命中" Width="40" DisplayMemberBinding="{Binding Move.Accuracy, Converter={x:Static c:AccuracyString.C}}"/>
                     <GridViewColumn Header="PP" Width="40" DisplayMemberBinding="{Binding Move.PP}"/>
-                    <GridViewColumn Header="英文名称" Width="115" DisplayMemberBinding="{Binding BackupName}"/>
+                    <GridViewColumn Header="描述" Width="115" DisplayMemberBinding="{Binding Move.Id, Converter={x:Static c:MoveDString.C}}"/>
                 </GridView>
             </ListView.View>
         </ListView>

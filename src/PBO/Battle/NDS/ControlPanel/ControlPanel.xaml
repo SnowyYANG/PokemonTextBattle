@@ -88,7 +88,7 @@
                                         <TextBlock Text="{Binding PP.Value}" Foreground="White" Canvas.Right="50"/>
                                         <TextBlock Text="/" Foreground="White" Canvas.Left="113"/>
                                         <TextBlock Text="{Binding PP.Origin}" Foreground="White" Canvas.Left="120"/>
-                                        <ContentControl Content="{Binding Type.Type}" ContentTemplate="{x:Static ui:Labels.BattleType}" Canvas.Left="1" Canvas.Top="31"/>
+                                        <ContentControl Content="{Binding Type.Type}" ContentTemplate="{StaticResource BattleType}" Canvas.Left="1" Canvas.Top="31"/>
                                     </Canvas>
                                 </DataTemplate>
                             </Setter.Value>
@@ -128,7 +128,7 @@
                                         <TextBlock Text="{Binding PP.Value}" Canvas.Right="34"/>
                                         <TextBlock Text="/" Canvas.Left="129"/>
                                         <TextBlock Text="{Binding PP.Origin}" Canvas.Left="138"/>
-                                        <ContentControl Content="{Binding Type.Type}" ContentTemplate="{x:Static ui:Labels.BattleType}" Canvas.Left="18" Canvas.Top="31"/>
+                                        <ContentControl Content="{Binding Type.Type}" ContentTemplate="{StaticResource BattleType}" Canvas.Left="18" Canvas.Top="31"/>
                                     </Canvas>
                                 </DataTemplate>
                             </Setter.Value>
@@ -424,8 +424,8 @@
                     <Rectangle Canvas.Top="5" Width="256" Height="22" Fill="Black"/>
                     <Image Source="{Binding Converter={x:Static c:SimPokemonIcon.C}}" Height="30" Width="40"/>
                     <TextBlock Text="{Binding Name}" Canvas.Left="40" Canvas.Top="8" Width="111" />
-                    <ContentPresenter Content="{Binding Form.Type1}" ContentTemplate="{x:Static ui:Labels.BattleType}" Width="40" Canvas.Right="3" Canvas.Top="8"/>
-                    <ContentPresenter Content="{Binding Form.Type2}" ContentTemplate="{x:Static ui:Labels.BattleType}" Width="40" Canvas.Right="45" Canvas.Top="8"/>
+                    <ContentPresenter Content="{Binding Form.Type1}" ContentTemplate="{StaticResource BattleType}" Width="40" Canvas.Right="3" Canvas.Top="8"/>
+                    <ContentPresenter Content="{Binding Form.Type2}" ContentTemplate="{StaticResource BattleType}" Width="40" Canvas.Right="45" Canvas.Top="8"/>
                     <Canvas x:Name="main" Width="256">
                         <Canvas.Resources>
                             <Style TargetType="Line">
