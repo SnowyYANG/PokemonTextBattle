@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30621.155
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TPBS", "PBO\TPBS.csproj", "{3C35464D-CF08-4DBB-9FE8-83F9AB140767}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PBOServer", "PBOServer\PBOServer.csproj", "{480C2C92-A2D7-4D44-96A6-030FFC3E6ACD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PokemonBattleOnline", "PokemonBattleOnline\PokemonBattleOnline.csproj", "{EE2C451E-A61E-4634-B382-5298982E060C}"
@@ -27,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PBO.Network.Server", "PBO.N
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PBO.Test", "PBO.Test\PBO.Test.csproj", "{CA8FC057-3DD7-4F64-9965-AD4BA3FF5EE6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TPBS", "TPBS\TPBS.csproj", "{3C35464D-CF08-4DBB-9FE8-83F9AB140767}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -34,11 +34,6 @@ Global
 		Test|Any CPU = Test|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{3C35464D-CF08-4DBB-9FE8-83F9AB140767}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3C35464D-CF08-4DBB-9FE8-83F9AB140767}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3C35464D-CF08-4DBB-9FE8-83F9AB140767}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3C35464D-CF08-4DBB-9FE8-83F9AB140767}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3C35464D-CF08-4DBB-9FE8-83F9AB140767}.Test|Any CPU.ActiveCfg = Debug|Any CPU
 		{480C2C92-A2D7-4D44-96A6-030FFC3E6ACD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{480C2C92-A2D7-4D44-96A6-030FFC3E6ACD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{480C2C92-A2D7-4D44-96A6-030FFC3E6ACD}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -78,6 +73,12 @@ Global
 		{CA8FC057-3DD7-4F64-9965-AD4BA3FF5EE6}.Release|Any CPU.ActiveCfg = Test|Any CPU
 		{CA8FC057-3DD7-4F64-9965-AD4BA3FF5EE6}.Test|Any CPU.ActiveCfg = Test|Any CPU
 		{CA8FC057-3DD7-4F64-9965-AD4BA3FF5EE6}.Test|Any CPU.Build.0 = Test|Any CPU
+		{3C35464D-CF08-4DBB-9FE8-83F9AB140767}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C35464D-CF08-4DBB-9FE8-83F9AB140767}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C35464D-CF08-4DBB-9FE8-83F9AB140767}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C35464D-CF08-4DBB-9FE8-83F9AB140767}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C35464D-CF08-4DBB-9FE8-83F9AB140767}.Test|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C35464D-CF08-4DBB-9FE8-83F9AB140767}.Test|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
