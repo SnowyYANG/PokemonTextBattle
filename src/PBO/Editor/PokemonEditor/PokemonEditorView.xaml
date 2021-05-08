@@ -5,7 +5,7 @@
              xmlns:c="clr-namespace:PokemonBattleOnline.PBO.Converters"
              xmlns:ui="clr-namespace:PokemonBattleOnline.PBO.Elements"
              xmlns:e="clr-namespace:PokemonBattleOnline.PBO.Editor"
-             UseLayoutRounding="True" Width="460" MinHeight="365">
+             UseLayoutRounding="True" Width="460" MinHeight="365" Background="#e0d6cc">
     <UserControl.Resources>
         <LinearGradientBrush x:Key="BgL" EndPoint="0.5,0" StartPoint="1,0">
             <GradientStop Color="#996f5347" Offset="0.5"/>
@@ -100,15 +100,7 @@
         </Style>
     </UserControl.Resources>
     <Grid Margin="0,18,0,0">
-        <Rectangle Margin="0,-14,0,0" Height="7" VerticalAlignment="Top">
-            <Rectangle.Fill>
-                <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
-                    <GradientStop Color="#ff6600"/>
-                    <GradientStop Color="#00ff6600" Offset="1"/>
-                </LinearGradientBrush>
-            </Rectangle.Fill>
-        </Rectangle>
-        <Button Click="Close_Click" ToolTip="关闭" Style="{x:Static ui:Controls.XButton}" Foreground="#b0b0b0" Background="White" BorderBrush="White" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,-24,3,0"/>
+        <Button Click="Close_Click" ToolTip="关闭" Style="{StaticResource XButton}" Foreground="#b0b0b0" Background="White" BorderBrush="White" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,-24,3,0"/>
         <Image Opacity="0.3" Source="{Binding Image}" Height="{Binding Image.PixelHeight}" Width="{Binding Image.PixelWidth}" MouseMove="Image_MouseMove" MouseLeave="Image_MouseLeave" MouseLeftButtonDown="Image_MouseLeftButtonDown" HorizontalAlignment="Center" VerticalAlignment="Top">
             <Image.Style>
                 <Style TargetType="Image">
@@ -300,11 +292,6 @@
                 <ComboBox.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom">
-                            <StackPanel.ToolTip>
-                                <ToolTip>
-                                    <Image Height="30" Width="40" Source="{Binding Converter={x:Static c:PokemonSpeciesIcon.C}}"/>
-                                </ToolTip>
-                            </StackPanel.ToolTip>
                             <TextBlock Text="{Binding Number, StringFormat=No.{0: 000}}" Margin="0,0,5,0"/>
                             <TextBlock Text="{Binding Number, Converter={x:Static c:PokemonSpeciesString.C}}"/>
                         </StackPanel>
@@ -374,8 +361,8 @@
                                             <ContentPresenter Content="{Binding Move.Type}" ContentTemplate="{StaticResource BattleType}" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="0,0,0,-1"/>
                                             <TextBlock Name="pp" Text="PP" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,30,1"/>
                                             <TextBlock Text="{Binding PP}" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,10,1"/>
-                                            <Button Name="ppUp" Command="{x:Static e:PokemonEditorVM.PPUpChangeCommand}" CommandParameter="{Binding}" Cursor="Hand" Style="{x:Static ui:Controls.XButton}" Content="↑" ToolTip="PP上升+1" Foreground="#a0a0a0" FontSize="12" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,3,1"/>
-                                            <Button Name="forget" Command="{x:Static e:PokemonEditorVM.RemoveMoveCommand}" CommandParameter="{Binding}" Cursor="Hand" Visibility="Collapsed" Style="{x:Static ui:Controls.XButton}" ToolTip="遗忘技能" Foreground="#ff8080" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,-4,4,0"/>
+                                            <Button Name="ppUp" Command="{x:Static e:PokemonEditorVM.PPUpChangeCommand}" CommandParameter="{Binding}" Cursor="Hand" Style="{StaticResource XButton}" Content="↑" ToolTip="PP上升+1" Foreground="#a0a0a0" FontSize="12" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,3,1"/>
+                                            <Button Name="forget" Command="{x:Static e:PokemonEditorVM.RemoveMoveCommand}" CommandParameter="{Binding}" Cursor="Hand" Visibility="Collapsed" Style="{StaticResource XButton}" ToolTip="遗忘技能" Foreground="#ff8080" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,-4,4,0"/>
                                         </Grid>
                                     </Border>
                                 </Border>

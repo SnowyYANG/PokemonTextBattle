@@ -47,32 +47,6 @@ namespace PokemonBattleOnline.PBO.Elements
       scb.Freeze();
       return scb;
     }
-    public static Brush GetGridTileBrush(double size, Brush Color)
-    {
-      DrawingBrush b = new DrawingBrush();
-      GeometryGroup gg = new GeometryGroup();
-      gg.Children.Add(new LineGeometry(new Point(0.5, 0), new Point(0.5, size)));
-      gg.Children.Add(new LineGeometry(new Point(1, 0.5), new Point(size, 0.5)));
-      b.Stretch = Stretch.None;
-      b.Drawing = new GeometryDrawing(null, new Pen(Color, 1), gg);
-      b.Viewport = new Rect(0, 0, size, size);
-      b.ViewportUnits = BrushMappingMode.Absolute;
-      b.TileMode = TileMode.Tile;
-      return b;
-    }
-    public static Brush GetHorizontalTileBrush(double size, Brush Color)
-    {
-      DrawingBrush b = new DrawingBrush();
-      DrawingGroup dg = new DrawingGroup();
-      dg.Children.Add(new GeometryDrawing(null, new Pen(Color, 1), new LineGeometry(new Point(0, 0.5), new Point(1, 0.5))));
-      b.Stretch = Stretch.None;
-      b.Drawing = dg;
-      b.Viewport = new Rect(0, 0, 1, size);
-      b.ViewportUnits = BrushMappingMode.Absolute;
-      b.TileMode = TileMode.Tile;
-      return b;
-    }
-
     public static Brush GetBrush(LogStyle style)
     {
       if (style.HasFlag(LogStyle.SYS)) return Brushes.OrangeRed;

@@ -24,7 +24,6 @@ namespace PokemonBattleOnline.PBO.Editor
             Current = this; //teamvm needs to access current
             _battleTeams = new ObservableCollection<TeamVM>();
             _teams = new ObservableCollection<TeamVM>(teams.Select((t) => new TeamVM(t)));
-            _teams.Insert(0, null);
             _editingPokemon = new PokemonEditorVM();
         }
 

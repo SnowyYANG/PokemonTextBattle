@@ -123,10 +123,10 @@ namespace PokemonBattleOnline.PBO.Editor
             }
         }
 
-        public ImageSource Icon
-        { get { return null; } }
-        public ImageSource RIcon
-        { get { return null; } }
+        public string Icon
+        { get { return Model == null ? Index == 0 || Container[Index - 1].Model != null ? "新建宝可梦" : null : Model.Name; } }
+        public string RIcon
+        { get { return Model?.Name; } }
 
         public bool IsRare
         {

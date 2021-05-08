@@ -6,7 +6,7 @@
         xmlns:pbo="clr-namespace:PokemonBattleOnline.PBO"
         xmlns:e="clr-namespace:PokemonBattleOnline.PBO.Editor"
         xmlns:local="clr-namespace:PokemonBattleOnline.PBO.Lobby"
-        Title="Pokemon Battle Online" MinWidth="560" MinHeight="500" TextOptions.TextRenderingMode="Grayscale">
+        Title="Text Pokemon Battle Simulator" MinWidth="560" MinHeight="500" TextOptions.TextRenderingMode="Grayscale">
     <TabControl TabStripPlacement="Left">
         <TabControl.ItemContainerStyle>
             <Style TargetType="TabItem">

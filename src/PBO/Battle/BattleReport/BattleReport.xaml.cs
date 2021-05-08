@@ -81,7 +81,7 @@ namespace PokemonBattleOnline.PBO.Battle
     }
     public void AddUserText(string text, User user)
     {
-      controller.AddText(text.LineBreak(), Cartes.GetChatBrush(user.Name));
+      controller.AddText(text.LineBreak(), Converters.UserColor.GetChatBrush(user.Name));
       AutoScroll();
     }
     public void AddChatText(string chat, User user)

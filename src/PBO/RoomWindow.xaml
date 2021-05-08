@@ -18,10 +18,10 @@
                 <RowDefinition Name="PX1" Height="0"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            <ContentControl Content="{Binding Room[0]}" ContentTemplate="{x:Static ui:Cartes.User}" HorizontalAlignment="Left"/>
-            <ContentControl Content="{Binding Room[2]}" ContentTemplate="{x:Static ui:Cartes.UserR}" HorizontalAlignment="Right" Grid.Column="1"/>
-            <ContentControl Content="{Binding Room[1]}" ContentTemplate="{x:Static ui:Cartes.User}" HorizontalAlignment="Left" Grid.Row="1"/>
-            <ContentControl Content="{Binding Room[3]}" ContentTemplate="{x:Static ui:Cartes.UserR}" HorizontalAlignment="Right" Grid.Row="1" Grid.Column="1"/>
+            <ContentControl Content="{Binding Room[0]}" ContentTemplate="{StaticResource User}" HorizontalAlignment="Left"/>
+            <ContentControl Content="{Binding Room[2]}" ContentTemplate="{StaticResource User}" HorizontalAlignment="Right" Grid.Column="1"/>
+            <ContentControl Content="{Binding Room[1]}" ContentTemplate="{StaticResource User}" HorizontalAlignment="Left" Grid.Row="1"/>
+            <ContentControl Content="{Binding Room[3]}" ContentTemplate="{StaticResource User}" HorizontalAlignment="Right" Grid.Row="1" Grid.Column="1"/>
             <TextBlock Text="VS" Foreground="#333333" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.RowSpan="2"/>
             <TextBlock Name="Spectating" Text="观战中，游戏尚未开始，等待游戏开始。" Margin="0,35,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" Grid.Row="2"/>
             <StackPanel Name="PrepareTeam" Orientation="Horizontal" Margin="0,32,0,0" Height="30" VerticalAlignment="Top" HorizontalAlignment="Center" Grid.Row="2">

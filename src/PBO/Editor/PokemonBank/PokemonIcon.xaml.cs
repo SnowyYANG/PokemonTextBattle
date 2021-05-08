@@ -60,15 +60,15 @@ namespace PokemonBattleOnline.PBO.Editor
                 var va = VM.Actual;
                 if (ctrl)
                 {
-                    data.icon.Source = data.VM.Icon;
+                    data.icon.Text = data.VM.Icon;
                     va.DropState = va.Model != null ? 2 : 1;
                 }
                 else
                 {
-                    data.icon.Source = va.Model == null ? null : va.Icon;
+                    data.icon.Text = va.Model == null ? null : va.Icon;
                     va.DropState = 1;
                 }
-                icon.Source = null;
+                icon.Text = null;
             }
         }
 
@@ -110,7 +110,7 @@ namespace PokemonBattleOnline.PBO.Editor
         protected override void OnMouseEnter(MouseEventArgs e)
         {
             base.OnMouseEnter(e);
-            Stroke.StrokeThickness = 3;
+            BorderThickness = new Thickness(0, 0, 0, 3);
         }
         protected override void OnMouseMove(MouseEventArgs e)
         {
@@ -119,9 +119,9 @@ namespace PokemonBattleOnline.PBO.Editor
             {
                 click = false;
                 drag = true;
-                Stroke.Stroke = SBrushes.BlueM;
-                Stroke.StrokeThickness = 3;
-                PokemonBank.Current.DragIcon.Source = VM.Icon;
+                BorderBrush = SBrushes.BlueM;
+                BorderThickness = new Thickness(0,0,0,1);
+                PokemonBank.Current.DragIcon.Text = VM.Icon;
                 PokemonBank.Current.DragIcon.Visibility = Visibility.Visible;
                 Cursor = Cursors.None;
                 if (VM.Model != null) DragDrop.DoDragDrop(this, this, DragDropEffects.All);
@@ -130,15 +130,15 @@ namespace PokemonBattleOnline.PBO.Editor
                 icon.ClearValue(Image.SourceProperty);
                 icon.Visibility = System.Windows.Visibility.Visible;
                 PokemonBank.Current.DragIcon.Visibility = Visibility.Collapsed;
-                Stroke.ClearValue(Polygon.StrokeProperty);
-                Stroke.ClearValue(Polygon.StrokeThicknessProperty);
+                ClearValue(BorderBrushProperty);
+                ClearValue(BorderThicknessProperty);
             }
         }
         protected override void OnMouseLeave(MouseEventArgs e)
         {
             base.OnMouseLeave(e);
             click = false;
-            if (!drag) Stroke.ClearValue(Polygon.StrokeThicknessProperty);
+            if (!drag) ClearValue(BorderThicknessProperty);
         }
         protected override void OnMouseLeftButtonUp(MouseButtonEventArgs e)
         {
@@ -176,6 +176,17 @@ namespace PokemonBattleOnline.PBO.Editor
             Copy.IsEnabled = Remove.IsEnabled = model != null;
             CopyAll.IsEnabled = VM.Container.Model.Pokemons[0] != null;
             Paste.IsEnabled = Clipboard.ContainsText();
+        }
+
+        private void removeTeam_Click(object sender, RoutedEventArgs e)
+        {
+            var editing = EditorVM.Current.EditingPokemon.Origin != null && EditorVM.Current.EditingPokemon.Origin.Container == VM.Container;
+            if (MessageBox.Show(editing ? "这个队伍里的精灵正在编辑，确实要删除么？" : "删除队伍？", "PBO", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+            {
+                if (editing) EditorVM.Current.EditingPokemon.Origin = null;
+                if (VM.Container.CanBattle) EditorVM.Current.BattleTeams.Remove(VM.Container);
+                EditorVM.Current.Teams.Remove(VM.Container);
+            }
         }
     }
 }

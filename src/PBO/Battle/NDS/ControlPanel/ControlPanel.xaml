@@ -264,7 +264,7 @@
                                     <DataTemplate>
                                         <Canvas UseLayoutRounding="True">
                                             <Canvas.Resources>
-                                                <Style TargetType="Label" BasedOn="{x:Static ui:Controls.STextBlock}">
+                                                <Style TargetType="Label" BasedOn="{StaticResource STextBlock}">
                                                     <Setter Property="FontWeight" Value="Bold"/>
                                                     <Setter Property="Canvas.Top" Value="36"/>
                                                 </Style>
@@ -321,7 +321,7 @@
                                     <DataTemplate>
                                         <Canvas Margin="8,0,0,0" UseLayoutRounding="True">
                                             <Canvas.Resources>
-                                                <Style TargetType="Label" BasedOn="{x:Static ui:Controls.STextBlock}">
+                                                <Style TargetType="Label" BasedOn="{StaticResource STextBlock}">
                                                     <Setter Property="FontWeight" Value="Bold"/>
                                                     <Setter Property="Canvas.Top" Value="36"/>
                                                 </Style>
@@ -402,8 +402,8 @@
         </TabItem>
     </TabControl>
     <StackPanel x:Name="Time" Orientation="Horizontal" Canvas.Top="-88" Canvas.Right="-35">
-        <Label Content="剩余时间：" Style="{x:Static ui:Controls.STextBlock}" FontSize="13"/>
-        <Label Content="{Binding Time}" Style="{x:Static ui:Controls.STextBlock}" FontSize="13"/>        
+        <Label Content="剩余时间：" FontSize="13"/>
+        <Label Content="{Binding Time}" FontSize="13"/>        
     </StackPanel>
     <ContentControl x:Name="Current" IsHitTestVisible="False" Canvas.Left="320" Canvas.Top="50">
         <ContentControl.ContentTemplate>

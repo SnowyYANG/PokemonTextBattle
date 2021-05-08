@@ -9,7 +9,7 @@
         <ImageBrush x:Key="Red" TileMode="Tile" Viewport="0,0,1,4" ViewportUnits="Absolute"/>
     </Canvas.Resources>
     <Rectangle Name="Bar" Height="4" Stroke="{x:Null}" StrokeThickness="0"/>
-    <Label Content="/" Style="{x:Static ui:Controls.STextBlock}" FontSize="10" FontWeight="Bold" Canvas.Left="19" Canvas.Top="6"/>
-    <Label Name="Max" Style="{x:Static ui:Controls.STextBlock}" FontSize="12" FontWeight="Bold" Canvas.Left="27" Canvas.Top="5"/>
-    <Label Name="Current" Style="{x:Static ui:Controls.STextBlock}" FontSize="12" FontWeight="Bold" Canvas.Right="30" Canvas.Top="5"/>
+    <Label Content="/" Style="{StaticResource STextBlock}" FontSize="10" FontWeight="Bold" Canvas.Left="19" Canvas.Top="6"/>
+    <Label Name="Max" Style="{StaticResource STextBlock}" FontSize="12" FontWeight="Bold" Canvas.Left="27" Canvas.Top="5"/>
+    <Label Name="Current" Style="{StaticResource STextBlock}" FontSize="12" FontWeight="Bold" Canvas.Right="30" Canvas.Top="5"/>
 </Canvas>

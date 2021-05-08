@@ -34,7 +34,7 @@ namespace PokemonBattleOnline.PBO.Editor
             var data = (PokemonIcon)e.Data.GetData(typeof(PokemonIcon));
             if (data != null)
             {
-                data.icon.Source = null;
+                data.icon.Text = null;
                 var p = e.GetPosition(this);
                 Canvas.SetLeft(DragIcon, p.X - DragIcon.ActualWidth / 2);
                 Canvas.SetTop(DragIcon, p.Y - DragIcon.ActualHeight / 2);

@@ -18,7 +18,7 @@
                 <TabItem Header="房间" Background="{x:Null}">
                     <ScrollViewer Padding="3">
                         <Grid>
-                            <ItemsControl Name="Rooms" ItemsPanel="{x:Static ui:Controls.WrapPanel}">
+                            <ItemsControl Name="Rooms" ItemsPanel="{StaticResource WrapPanel}">
                                 <ItemsControl.ItemContainerStyle>
                                     <Style TargetType="ContentPresenter">
                                         <Setter Property="Width" Value="256"/>
@@ -74,10 +74,10 @@
                 </TabItem>
                 <TabItem Header="用户" Background="{x:Null}">
                     <ScrollViewer Padding="3">
-                        <ItemsControl Name="Users" ItemsPanel="{x:Static ui:Controls.WrapPanel}">
+                        <ItemsControl Name="Users" ItemsPanel="{StaticResource WrapPanel}">
                             <ItemsControl.ItemTemplate>
                                 <DataTemplate>
-                                    <ContentControl Content="{Binding}" ContentTemplate="{x:Static ui:Cartes.User}">
+                                    <ContentControl Content="{Binding}" ContentTemplate="{StaticResource User}">
                                         <ContentControl.ContextMenu>
                                             <ContextMenu>
                                                 <MenuItem Header="聊天" Command="{x:Static l:Chat.NewChatCommand}" CommandParameter="{Binding}"/>
@@ -90,7 +90,7 @@
                     </ScrollViewer>
                 </TabItem>
             </TabControl>
-            <Button Content="登出服务器" Click="Exit_Click" Style="{x:Static ui:Controls.XButton}" FontSize="12" Foreground="#336699" Background="#000000" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="2"/>
+            <Button Content="登出服务器" Click="Exit_Click" Style="{StaticResource XButton}" FontSize="12" Foreground="#336699" Background="#000000" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="2"/>
         </Grid>
         <l:Chat x:Name="chat"/>
         <GridSplitter x:Name="split" Background="Transparent" ShowsPreview="True">

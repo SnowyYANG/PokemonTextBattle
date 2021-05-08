@@ -9,7 +9,7 @@
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>PokemonBattleOnline.PBO</RootNamespace>
-    <AssemblyName>PBO</AssemblyName>
+    <AssemblyName>TPBS</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
@@ -88,10 +88,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Editor\PokemonBank\TeamView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Editor\PokemonEditor\BaseHexagon.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -148,9 +144,6 @@
     <Compile Include="Editor\PokemonBank\PokemonIcon.xaml.cs">
       <DependentUpon>PokemonIcon.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Editor\PokemonBank\TeamView.xaml.cs">
-      <DependentUpon>TeamView.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Editor\PokemonEditor\BaseHexagon.xaml.cs">
       <DependentUpon>BaseHexagon.xaml</DependentUpon>
     </Compile>
@@ -203,9 +196,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Elements\SBrushes.cs" />
-    <Compile Include="Elements\Cartes\Cartes.cs" />
     <Compile Include="Config.cs" />
-    <Compile Include="Elements\Controls\Controls.cs" />
     <Compile Include="Elements\Controls\Command.cs" />
     <Compile Include="Battle\NDS\LifeBars\LifeBarSimplified.xaml.cs">
       <DependentUpon>LifeBarSimplified.xaml</DependentUpon>
@@ -220,17 +211,9 @@
     <Compile Include="Helper.cs" />
     <Compile Include="Elements\Labels\Labels.cs" />
     <Compile Include="Elements\ShowMessageBox.cs" />
-    <Page Include="Elements\Cartes\User.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Page Include="Battle\NDS\LifeBars\LifeBarSimplified.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Elements\Controls\Controls.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Elements\Labels\Gender.xaml">
       <SubType>Designer</SubType>

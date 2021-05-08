@@ -107,7 +107,7 @@ namespace PokemonBattleOnline.PBO.Lobby
     void OnPublicChat(string content, User user)
     {
       Run r = new Run(user.Name + ": " + content + "\n");
-      r.Foreground = Cartes.GetChatBrush(user.Name);
+      r.Foreground = Converters.UserColor.GetChatBrush(user.Name);
       if (Scroll.ScrollableHeight - Scroll.ExtentHeight < 5)
       {
         chat.Inlines.Add(r);
@@ -122,7 +122,7 @@ namespace PokemonBattleOnline.PBO.Lobby
       ((TextBox)ti.Content).AppendText(user.Name + ": " + content + "\n");
       if (whom.SelectedItem != ti)
       {
-        ti.Foreground = Elements.SBrushes.OrangeM;
+        ti.Foreground = SBrushes.OrangeM;
         PlaySound();
       }
     }
