@@ -12,7 +12,7 @@
         <ListView Margin="0,20,0,0" ItemsSource="{Binding Teams}">
             <ListView.Resources>
                 <Style TargetType="ListViewItem">
-                    <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+                    <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
                 </Style>
             </ListView.Resources>
             <ListView.View>
@@ -20,56 +20,56 @@
                     <GridViewColumn>
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <CheckBox IsChecked="{Binding CanBattle}"/>
+                                <CheckBox IsChecked="{Binding CanBattle}" Margin="-6,0"/>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
                     <GridViewColumn Header="队伍名称">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <TextBox Text="{Binding Name}"/>
+                                <TextBox Text="{Binding Name}" Margin="-6,0"/>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
                     <GridViewColumn Header="首发宝可梦">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <e:PokemonIcon DataContext="{Binding [0]}"/>
+                                <e:PokemonIcon DataContext="{Binding [0]}" Margin="-4,0"/>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
                     <GridViewColumn>
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <e:PokemonIcon DataContext="{Binding [1]}"/>
+                                <e:PokemonIcon DataContext="{Binding [1]}" Margin="-4,0"/>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
                     <GridViewColumn>
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <e:PokemonIcon DataContext="{Binding [2]}"/>
+                                <e:PokemonIcon DataContext="{Binding [2]}" Margin="-4,0"/>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
                     <GridViewColumn>
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <e:PokemonIcon DataContext="{Binding [3]}"/>
+                                <e:PokemonIcon DataContext="{Binding [3]}" Margin="-4,0"/>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
                     <GridViewColumn>
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <e:PokemonIcon DataContext="{Binding [4]}"/>
+                                <e:PokemonIcon DataContext="{Binding [4]}" Margin="-4,0"/>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
                     <GridViewColumn>
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <e:PokemonIcon DataContext="{Binding [5]}"/>
+                                <e:PokemonIcon DataContext="{Binding [5]}" Margin="-4,0"/>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>

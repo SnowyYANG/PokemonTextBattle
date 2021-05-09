@@ -8,17 +8,11 @@
     <UserControl.Style>
         <Style TargetType="UserControl">
             <Style.Triggers>
-                <DataTrigger Binding="{Binding IsDragging}" Value="True">
-                    <Setter Property="BorderBrush" Value="{x:Static ui:SBrushes.BlueM}"/>
-                    <Setter Property="BorderThickness" Value="0,0,0,1"/>
+                <DataTrigger Binding="{Binding IsRare}" Value="True">
+                    <Setter Property="Foreground" Value="#ff0000"/>
                 </DataTrigger>
-                <DataTrigger Binding="{Binding DropState}" Value="1">
-                    <Setter Property="BorderBrush" Value="{x:Static ui:SBrushes.BlueM}"/>
-                    <Setter Property="BorderThickness" Value="1"/>
-                </DataTrigger>
-                <DataTrigger Binding="{Binding DropState}" Value="2">
-                    <Setter Property="BorderBrush" Value="{x:Static ui:SBrushes.MagentaM}"/>
-                    <Setter Property="BorderThickness" Value="1"/>
+                <DataTrigger Binding="{Binding IsEditing}" Value="True">
+                    <Setter Property="FontWeight" Value="Bold"/>
                 </DataTrigger>
             </Style.Triggers>
         </Style>
@@ -44,17 +38,10 @@
             </StackPanel>
         </ToolTip>
     </UserControl.ToolTip>
-    <TextBlock x:Name="icon" Text="{Binding Icon}" HorizontalAlignment="Center">
+    <TextBlock x:Name="icon" HorizontalAlignment="Center" IsHitTestVisible="False">
         <TextBlock.Style>
             <Style TargetType="TextBlock">
-                <Style.Triggers>
-                    <DataTrigger Binding="{Binding IsRare}" Value="True">
-                        <Setter Property="Foreground" Value="#ff0000"/>
-                    </DataTrigger>
-                    <DataTrigger Binding="{Binding IsEditing}" Value="True">
-                        <Setter Property="FontWeight" Value="Bold"/>
-                    </DataTrigger>
-                </Style.Triggers>
+                <Setter Property="Text" Value="{Binding Icon}"/>
             </Style>
         </TextBlock.Style>
     </TextBlock>

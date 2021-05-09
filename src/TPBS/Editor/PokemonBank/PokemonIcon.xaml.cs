@@ -78,8 +78,8 @@ namespace PokemonBattleOnline.PBO.Editor
             var data = (PokemonIcon)e.Data.GetData(typeof(PokemonIcon));
             if (data != null && data != this)
             {
-                data.icon.ClearValue(Image.SourceProperty);
-                icon.ClearValue(Image.SourceProperty);
+                data.icon.ClearValue(TextBlock.TextProperty);
+                icon.ClearValue(TextBlock.TextProperty);
                 VM.Actual.DropState = 0;
             }
         }
@@ -97,7 +97,7 @@ namespace PokemonBattleOnline.PBO.Editor
                 if (va.IsEditing) EditorVM.Current.EditingPokemon.Origin = data.VM;
                 else if (data.VM.IsEditing) EditorVM.Current.EditingPokemon.Origin = va;
             }
-            icon.ClearValue(Image.SourceProperty);
+            icon.ClearValue(TextBlock.TextProperty);
             va.DropState = 0;
         }
 
@@ -110,7 +110,6 @@ namespace PokemonBattleOnline.PBO.Editor
         protected override void OnMouseEnter(MouseEventArgs e)
         {
             base.OnMouseEnter(e);
-            BorderThickness = new Thickness(0, 0, 0, 3);
         }
         protected override void OnMouseMove(MouseEventArgs e)
         {
@@ -119,19 +118,15 @@ namespace PokemonBattleOnline.PBO.Editor
             {
                 click = false;
                 drag = true;
-                BorderBrush = SBrushes.BlueM;
-                BorderThickness = new Thickness(0,0,0,1);
                 PokemonBank.Current.DragIcon.Text = VM.Icon;
                 PokemonBank.Current.DragIcon.Visibility = Visibility.Visible;
                 Cursor = Cursors.None;
                 if (VM.Model != null) DragDrop.DoDragDrop(this, this, DragDropEffects.All);
                 Cursor = Cursors.Hand;
                 drag = false;
-                icon.ClearValue(Image.SourceProperty);
-                icon.Visibility = System.Windows.Visibility.Visible;
+                icon.ClearValue(TextBlock.TextProperty);
+                icon.Visibility = Visibility.Visible;
                 PokemonBank.Current.DragIcon.Visibility = Visibility.Collapsed;
-                ClearValue(BorderBrushProperty);
-                ClearValue(BorderThicknessProperty);
             }
         }
         protected override void OnMouseLeave(MouseEventArgs e)
