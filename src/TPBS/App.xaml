@@ -104,6 +104,53 @@
                 </DataTrigger>
             </DataTemplate.Triggers>
         </DataTemplate>
+        <DataTemplate x:Key="GenderLabel">
+            <TextBlock Name="gender" FontSize="14"/>
+            <DataTemplate.Triggers>
+                <DataTrigger Binding="{Binding}" Value="Male">
+                    <Setter TargetName="gender" Property="Text" Value="♂"/>
+                    <Setter TargetName="gender" Property="Foreground" Value="#00adff"/>
+                </DataTrigger>
+                <DataTrigger Binding="{Binding}" Value="Female">
+                    <Setter TargetName="gender" Property="Text" Value="♀"/>
+                    <Setter TargetName="gender" Property="Foreground" Value="#ff0000"/>
+                </DataTrigger>
+            </DataTemplate.Triggers>
+        </DataTemplate>
+        <DataTemplate x:Key="AbilityLabel">
+            <TextBlock Text="{Binding Converter={x:Static c:AbilityString.C}}">
+                <TextBlock.ToolTip>
+                    <ToolTip Content="{Binding Converter={x:Static c:AbilityDString.C}}"/>
+                </TextBlock.ToolTip>
+            </TextBlock>
+            <DataTemplate.Triggers>
+                <DataTrigger Binding="{Binding}" Value="0">
+                    <Setter Property="Visibility" Value="Collapsed"/>
+                </DataTrigger>
+            </DataTemplate.Triggers>
+        </DataTemplate>
+        <DataTemplate x:Key="ItemLabel">
+            <TextBlock Text="{Binding Converter={x:Static c:ItemString.C}}" ToolTip="{Binding Converter={x:Static c:ItemDString.C}}"/>
+        </DataTemplate>
+        <DataTemplate x:Key="PokemonStateLabel">
+            <Image Name="img" Height="10" Width="40" SnapsToDevicePixels="True" Stretch="Uniform" ToolTip="{Binding}"/>
+            <DataTemplate.Triggers>
+                <DataTrigger Binding="{Binding}" Value="BRN">
+                </DataTrigger>
+                <DataTrigger Binding="{Binding}" Value="FRZ">
+                </DataTrigger>
+                <DataTrigger Binding="{Binding}" Value="PAR">
+                </DataTrigger>
+                <DataTrigger Binding="{Binding}" Value="PSN">
+                </DataTrigger>
+                <DataTrigger Binding="{Binding}" Value="BadlyPSN">
+                </DataTrigger>
+                <DataTrigger Binding="{Binding}" Value="SLP">
+                </DataTrigger>
+                <DataTrigger Binding="{Binding}" Value="Faint">
+                </DataTrigger>
+            </DataTemplate.Triggers>
+        </DataTemplate>
         <DataTemplate x:Key="User">
             <TextBlock Text="{Binding Name}" Width="128" Background="Transparent" Foreground="{Binding Name,Converter={x:Static c:UserColor.C}}"/>
         </DataTemplate>

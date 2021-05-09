@@ -245,7 +245,7 @@
                     </Style>
                 </TextBox.Style>
             </TextBox>
-            <ContentControl MouseLeftButtonDown="Gender_MouseLeftButtonDown" Content="{Binding Gender}" ContentTemplate="{x:Static ui:Labels.Gender}" Cursor="Hand" ToolTip="性别" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,5,2"/>
+            <ContentControl MouseLeftButtonDown="Gender_MouseLeftButtonDown" Content="{Binding Gender}" ContentTemplate="{StaticResource GenderLabel}" Cursor="Hand" ToolTip="性别" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,5,2"/>
             <Label Content="  Lv." Background="{StaticResource BgL}" Grid.Row="1"/>
             <ui:NumericUpdown Value="{Binding Model.Lv,Mode=TwoWay}" Minimum="1" Median="50" Maximum="100" Width="50" HorizontalAlignment="Left" HorizontalContentAlignment="Left" Grid.Row="1" Margin="35,0,0,1"/>
             <Canvas Visibility="{Binding HappinessVisibility}" ToolTip="亲密度" MouseLeftButtonDown="Happiness_MouseLeftButtonDown" Cursor="Hand" Background="Transparent" Width="29" Height="25" HorizontalAlignment="Right" Grid.Row="1" Margin="10,0">
@@ -314,9 +314,9 @@
                 <RowDefinition/>
             </Grid.RowDefinitions>
             <Label Content="特性" Background="{StaticResource BgD}"/>
-            <ComboBox SelectedItem="{Binding Model.Ability}" ItemsSource="{Binding PokemonForm.Data.Abilities}" ItemTemplate="{x:Static ui:Labels.Ability}" ItemContainerStyle="{x:Null}" ToolTip="{Binding Model.Ability,Converter={x:Static c:AbilityDString.C}}"/>
+            <ComboBox SelectedItem="{Binding Model.Ability}" ItemsSource="{Binding PokemonForm.Data.Abilities}" ItemTemplate="{StaticResource AbilityLabel}" ItemContainerStyle="{x:Null}" ToolTip="{Binding Model.Ability,Converter={x:Static c:AbilityDString.C}}"/>
             <Label Content="道具" Grid.Row="1" Background="{StaticResource BgL}"/>
-            <ComboBox SelectedItem="{Binding HeldItem}" ItemsSource="{x:Static pm:RomData.Items}" ItemTemplate="{x:Static ui:Labels.Item}" ItemsPanel="{StaticResource VirtualPanel}" ToolTip="{Binding HeldItem,Converter={x:Static c:ItemDString.C}}" Grid.Row="1"/>
+            <ComboBox SelectedItem="{Binding HeldItem}" ItemsSource="{x:Static pm:RomData.Items}" ItemTemplate="{StaticResource ItemLabel}" ItemsPanel="{StaticResource VirtualPanel}" ToolTip="{Binding HeldItem,Converter={x:Static c:ItemDString.C}}" Grid.Row="1"/>
         </Grid>
 
         <Canvas DataContext="{Binding Model.Moves}" Margin="0,190,0,0" VerticalAlignment="Top">

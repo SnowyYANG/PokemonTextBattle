@@ -186,7 +186,7 @@
                                     <Canvas DataContext="{Binding Pokemon}">
                                         <Rectangle RadiusX="5" RadiusY="5" Fill="#80000000" Width="100" Height="24" Canvas.Left="-15" Canvas.Top="-12"/>
                                         <TextBlock Text="{Binding Name}" FontSize="14" Foreground="#ffffff" Width="100" Canvas.Left="-15" Canvas.Top="-9"/>
-                                        <ContentPresenter Content="{Binding Gender}" TextBlock.FontSize="14" ContentTemplate="{x:Static ui:Labels.Gender}" Canvas.Left="58" Canvas.Top="13"/>
+                                        <ContentPresenter Content="{Binding Gender}" TextBlock.FontSize="14" ContentTemplate="{StaticResource GenderLabel}" Canvas.Left="58" Canvas.Top="13"/>
                                         <Image Source="{Binding Converter={x:Static c:PokemonOutwardIcon.C}}" Height="30" Width="40" SnapsToDevicePixels="True" Canvas.Bottom="3" Canvas.Right="18"/>
                                     </Canvas>
                                 </DataTemplate>
@@ -206,7 +206,7 @@
                                     <Canvas DataContext="{Binding Pokemon}">
                                         <Rectangle RadiusX="5" RadiusY="5" Fill="#80000000" Width="100" Height="24" Canvas.Left="-15" Canvas.Top="-12"/>
                                         <TextBlock Text="{Binding Name}" FontSize="14" Foreground="#ffffff" Width="100" Canvas.Left="-15" Canvas.Top="-9"/>
-                                        <ContentPresenter Content="{Binding Gender}" ContentTemplate="{x:Static ui:Labels.Gender}" Canvas.Left="58" Canvas.Top="13"/>
+                                        <ContentPresenter Content="{Binding Gender}" ContentTemplate="{StaticResource GenderLabel}" Canvas.Left="58" Canvas.Top="13"/>
                                         <Image Source="{Binding Converter={x:Static c:SimPokemonIcon.C}}" Height="30" Width="40" SnapsToDevicePixels="True" Canvas.Bottom="3" Canvas.Right="18"/>
                                     </Canvas>
                                 </DataTemplate>
@@ -272,9 +272,9 @@
                                             <Image Source="{Binding Converter={x:Static c:SimPokemonIcon.C}}" Height="30" Width="40" SnapsToDevicePixels="True" Canvas.Left="-1" Canvas.Top="4"/>
                                             <Image Name="item" Stretch="Uniform" Width="8" Height="10" Canvas.Left="28" Canvas.Top="26" SnapsToDevicePixels="True" />
                                             <TextBlock Text="{Binding Name}" Foreground="Black" FontSize="14" Width="54" Canvas.Left="39" Canvas.Top="9"/>
-                                            <ContentPresenter Content="{Binding Gender}" ContentTemplate="{x:Static ui:Labels.Gender}" Canvas.Left="139" Canvas.Top="9"/>
+                                            <ContentPresenter Content="{Binding Gender}" ContentTemplate="{StaticResource GenderLabel}" Canvas.Left="139" Canvas.Top="9"/>
                                             <b:LifeBarSimplified DataContext="{Binding Hp}" Canvas.Left="56" Canvas.Top="27"/>
-                                            <ContentControl Content="{Binding State}" ContentTemplate="{x:Static ui:Labels.PokemonState}" Canvas.Left="11" Canvas.Top="38"/>
+                                            <ContentControl Content="{Binding State}" ContentTemplate="{StaticResource PokemonStateLabel}" Canvas.Left="11" Canvas.Top="38"/>
                                             <Label Name="lvt" Content="Lv." Visibility="Collapsed" Canvas.Left="10"/>
                                             <Label Name="lv" Content="{Binding Lv}" Visibility="Collapsed" Canvas.Left="27"/>
                                             <Label Content="{Binding Hp.Value}" Canvas.Right="67"/>
@@ -329,9 +329,9 @@
                                             <Image Source="{Binding Converter={x:Static c:SimPokemonIcon.C}}" Height="30" Width="40" SnapsToDevicePixels="True" Canvas.Left="-1" Canvas.Top="6"/>
                                             <Image Name="item" Stretch="Uniform" Width="8" Height="10" Canvas.Left="28" Canvas.Top="26" SnapsToDevicePixels="True" />
                                             <TextBlock Text="{Binding Name}" Foreground="Black" FontSize="14" Width="54" Canvas.Left="39" Canvas.Top="9"/>
-                                            <ContentPresenter Content="{Binding Gender}" ContentTemplate="{x:Static ui:Labels.Gender}" Canvas.Left="139" Canvas.Top="9"/>
+                                            <ContentPresenter Content="{Binding Gender}" ContentTemplate="{StaticResource GenderLabel}" Canvas.Left="139" Canvas.Top="9"/>
                                             <b:LifeBarSimplified DataContext="{Binding Hp}" Canvas.Left="56" Canvas.Top="27"/>
-                                            <ContentControl Content="{Binding State}" ContentTemplate="{x:Static ui:Labels.PokemonState}" Canvas.Left="11" Canvas.Top="38"/>
+                                            <ContentControl Content="{Binding State}" ContentTemplate="{StaticResource PokemonStateLabel}" Canvas.Left="11" Canvas.Top="38"/>
                                             <Label Name="lvt" Content="Lv." Visibility="Collapsed" Canvas.Left="10"/>
                                             <Label Name="lv" Content="{Binding Lv}" Visibility="Collapsed" Canvas.Left="27"/>
                                             <Label Content="{Binding Hp.Value}" Canvas.Right="57"/>

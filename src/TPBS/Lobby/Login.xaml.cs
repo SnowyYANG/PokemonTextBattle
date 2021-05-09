@@ -24,13 +24,13 @@ namespace PokemonBattleOnline.PBO.Lobby
         public Login()
         {
             InitializeComponent();
-            PBOClient.LoginFailed_Name += () => LoginFailed(R.LOGINFAILED_NAME);
+            PBOClient.LoginFailed_Name += () => LoginFailed("不能使用的登陆名。");
             PBOClient.LoginFailed_Version += (sv) =>
             {
-                if (sv < PBOMarks.VERSION) LoginFailed(R.LOGINFAILED_VERSION_OLDSERVER);
-                else LoginFailed(R.LOGINFAILED_VERSION_OLDCLIENT);
+                if (sv < PBOMarks.VERSION) LoginFailed("客户端与服务器的版本不兼容，客户端版本较新。");
+                else LoginFailed("客户端与服务器的版本不兼容，请到http://snowy.asia/下载最新版客户端。");
             };
-            PBOClient.LoginFailed_Full += () => LoginFailed(R.LOGINFAILED_FULL);
+            PBOClient.LoginFailed_Full += () => LoginFailed("服务器已满。");
             PBOClient.LoginFailed_Disconnect += () => LoginFailed("连接到服务器失败。");
             PBOClient.CurrentChanged += () =>
               {
@@ -67,7 +67,6 @@ namespace PokemonBattleOnline.PBO.Lobby
                 var av = 0;
                 PBOClient.Login(servers.Text.Trim(), na, (ushort)av);
                 Config.Name = na;
-                Config.Avatar = av;
                 IsEnabled = false;
             }
         }

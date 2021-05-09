@@ -21,7 +21,7 @@
                                     <Label Content="{Binding Name}" Style="{StaticResource STextBlock}" FontSize="13" Canvas.Right="50" Canvas.Top="-6"/>
                                     <Label Content="{Binding Lv}" Style="{StaticResource STextBlock}" FontSize="12" FontWeight="Bold" Canvas.Left="49" Canvas.Top="-5"/>
                                     <Image DataContext="{Binding Gender}" Canvas.Left="27" Canvas.Top="-6"/>
-                                    <ContentControl Content="{Binding State}" ContentTemplate="{x:Static ui:Labels.PokemonState}" Canvas.Left="-45" Canvas.Top="7"/>
+                                    <ContentControl Content="{Binding State}" ContentTemplate="{StaticResource PokemonStateLabel}" Canvas.Left="-45" Canvas.Top="7"/>
                                     <Image x:Name="mega" Height="15" Width="15" Canvas.Left="35" Canvas.Top="-7"/>
                                     <b:LifeBar DataContext="{Binding Hp}" Canvas.Left="21" Canvas.Top="10"/>
                                 </Canvas>
@@ -64,7 +64,7 @@
                                     <Label Content="{Binding Name}" Style="{StaticResource STextBlock}" FontSize="13" Canvas.Right="50" Canvas.Top="-6"/>
                                     <Label Content="{Binding Lv}" Style="{StaticResource STextBlock}" FontSize="12" FontWeight="Bold" Canvas.Left="49" Canvas.Top="-5"/>
                                     <Image DataContext="{Binding Gender}" Canvas.Left="27" Canvas.Top="-6"/>
-                                    <ContentControl Content="{Binding State}" ContentTemplate="{x:Static ui:Labels.PokemonState}" Canvas.Left="-45" Canvas.Top="7"/>
+                                    <ContentControl Content="{Binding State}" ContentTemplate="{StaticResource PokemonStateLabel}" Canvas.Left="-45" Canvas.Top="7"/>
                                     <Image x:Name="mega" Height="15" Width="15" Canvas.Left="35" Canvas.Top="-7"/>
                                     <b:LifeBarWithText DataContext="{Binding Hp}" Canvas.Left="21" Canvas.Top="10"/>
                                 </Canvas>

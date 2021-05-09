@@ -15,14 +15,11 @@ namespace PokemonBattleOnline.PBO
             var settings = ConfigurationManager.AppSettings;
             foreach (var s in (settings["servers"]??"").Split(';')) Servers.Add(s);
             Name = settings["name"];
-            int.TryParse(settings["avatar"], out Avatar);
         }
 
         public static readonly List<string> Servers = new List<string>();
 
         public static string Name;
-
-        public static int Avatar;
 
         private Config()
         {
@@ -38,10 +35,6 @@ namespace PokemonBattleOnline.PBO
             else settings[key].Value = value;
             key = "name";
             value = Name;
-            if (settings[key] == null) settings.Add(key, value);
-            else settings[key].Value = value;
-            key = "avatar";
-            value = Avatar.ToString();
             if (settings[key] == null) settings.Add(key, value);
             else settings[key].Value = value;
             configFile.Save(ConfigurationSaveMode.Modified);

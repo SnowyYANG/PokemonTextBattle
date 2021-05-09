@@ -151,7 +151,7 @@
     <Compile Include="Editor\PokemonEditor\EvBox.xaml.cs">
       <DependentUpon>EvBox.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Elements\Controls\LimitedValueRule.cs" />
+    <Compile Include="Elements\LimitedValueRule.cs" />
     <Compile Include="Lobby\Chat.xaml.cs">
       <DependentUpon>Chat.xaml</DependentUpon>
     </Compile>
@@ -193,11 +193,11 @@
   <ItemGroup>
     <Compile Include="Elements\SBrushes.cs" />
     <Compile Include="Config.cs" />
-    <Compile Include="Elements\Controls\Command.cs" />
+    <Compile Include="Elements\Command.cs" />
     <Compile Include="Battle\NDS\LifeBars\LifeBarSimplified.xaml.cs">
       <DependentUpon>LifeBarSimplified.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Elements\Controls\NumericUpdown.cs" />
+    <Compile Include="Elements\NumericUpdown.cs" />
     <Compile Include="Converters\BattleType.cs" />
     <Compile Include="Converters\Converter.cs" />
     <Compile Include="Converters\IntString.cs" />
@@ -205,25 +205,8 @@
     <Compile Include="Converters\MoveCategory.cs" />
     <Compile Include="Converters\PP.cs" />
     <Compile Include="Helper.cs" />
-    <Compile Include="Elements\Labels\Labels.cs" />
     <Compile Include="Elements\ShowMessageBox.cs" />
     <Page Include="Battle\NDS\LifeBars\LifeBarSimplified.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Elements\Labels\Gender.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Elements\Labels\Ability.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Elements\Labels\Item.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Elements\Labels\PokemonState.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -286,7 +269,6 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Editor\R.cs" />
     <Compile Include="Editor\PokemonEditor\LearnMethod.cs" />
     <Compile Include="Editor\PokemonBank\TeamVM.cs" />
     <Compile Include="Converters\IdMoveC.cs" />
@@ -301,13 +283,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Editor\R.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Lobby\R.cs" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="chat.wav" />
