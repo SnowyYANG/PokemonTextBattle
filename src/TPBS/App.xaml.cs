@@ -31,13 +31,8 @@ namespace PokemonBattleOnline.PBO
         ;
             GameString.Load(r + "res", "zh", "en");
             UserData.Load(r + "MyPBO\\user.dat");
-            Config.Load(r + "MyPBO\\config.xml");
-
-            FrameworkElement.LanguageProperty.OverrideMetadata(typeof(FrameworkElement), new FrameworkPropertyMetadata(XmlLanguage.GetLanguage(CultureInfo.CurrentCulture.IetfLanguageTag)));
-            var font = new FontFamily("Microsoft YaHei");
-            TextBlock.FontFamilyProperty.OverrideMetadata(typeof(TextBlock), new FrameworkPropertyMetadata(font));
-            TextElement.FontFamilyProperty.OverrideMetadata(typeof(TextElement), new FrameworkPropertyMetadata(font));
-            UIDispatcher.Init(Application.Current.Dispatcher);
+            Config.Load();
+            UIDispatcher.Init(Current.Dispatcher);
             new MainWindow().Show();
             base.OnStartup(e);
         }
@@ -46,7 +41,7 @@ namespace PokemonBattleOnline.PBO
         {
             if (e.ApplicationExitCode != 0)
             {
-                if (MessageBox.Show("PBO异常退出，是否保存编辑器中精灵的改动（否则恢复到PBO本次运行时前状态）？", "PBO", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+                if (MessageBox.Show("PBO异常退出，是否保存编辑器中精灵的改动（否则恢复到PBO本次运行前状态）？", "PBO", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
                 {
                     try
                     {
@@ -62,7 +57,7 @@ namespace PokemonBattleOnline.PBO
                 {
                     try
                     {
-                        Config.Current.Save();
+                        Config.Save();
                     }
                     catch
                     {

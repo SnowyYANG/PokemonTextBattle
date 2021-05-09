@@ -53,6 +53,7 @@
   <ItemGroup>
     <Reference Include="PresentationFramework.Aero" />
     <Reference Include="System" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Data" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml" />
@@ -183,11 +184,6 @@
     <ProjectReference Include="..\PBO.Network\PBO.Network.csproj">
       <Project>{61056B34-A2A8-485B-8A36-DF633E47C7F2}</Project>
       <Name>PBO.Network</Name>
-      <Private>False</Private>
-    </ProjectReference>
-    <ProjectReference Include="..\PokemonBattleOnline\PokemonBattleOnline.csproj">
-      <Project>{EE2C451E-A61E-4634-B382-5298982E060C}</Project>
-      <Name>PokemonBattleOnline</Name>
       <Private>False</Private>
     </ProjectReference>
   </ItemGroup>

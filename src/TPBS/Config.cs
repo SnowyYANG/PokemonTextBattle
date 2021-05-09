@@ -4,60 +4,48 @@ using System.Linq;
 using System.Text;
 using System.Runtime.Serialization;
 using System.IO;
+using System.Configuration;
 
 namespace PokemonBattleOnline.PBO
 {
-    [DataContract(Namespace = PBOMarks.PBO)]
     public class Config
     {
-        public static Config Current
-        { get; private set; }
-
-        public static void Load(string path)
+        public static void Load()
         {
-            try
-            {
-                using (FileStream f = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.Read))
-                    Current = Serializer.Deserialize<Config>(f);
-            }
-            catch
-            {
-                Current = new Config();
-            }
-            Current.Path = path;
+            var settings = ConfigurationManager.AppSettings;
+            foreach (var s in (settings["servers"]??"").Split(';')) Servers.Add(s);
+            Name = settings["name"];
+            int.TryParse(settings["avatar"], out Avatar);
         }
 
-        private string Path;
+        public static readonly List<string> Servers = new List<string>();
 
-        [DataMember(EmitDefaultValue = false)]
-        public int PokemonNumber;
+        public static string Name;
 
-        [DataMember(Name = "Servers", EmitDefaultValue = false)]
-        private List<string> _servers;
-        public List<string> Servers
-        {
-            get
-            {
-                if (_servers == null) _servers = new List<string>(30);
-                return _servers;
-            }
-            set { _servers = value; }
-        }
-
-        [DataMember(EmitDefaultValue = false)]
-        public string Name;
-
-        [DataMember(EmitDefaultValue = false)]
-        public int Avatar;
+        public static int Avatar;
 
         private Config()
         {
         }
 
-        public void Save()
+        public static void Save()
         {
-            using (FileStream f = new FileStream(Path, FileMode.Create))
-                Serializer.Serialize(this, f);
+            var configFile = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+            var settings = configFile.AppSettings.Settings;
+            var key = "servers";
+            var value = string.Join(";",Servers);
+            if (settings[key] == null) settings.Add(key, value);
+            else settings[key].Value = value;
+            key = "name";
+            value = Name;
+            if (settings[key] == null) settings.Add(key, value);
+            else settings[key].Value = value;
+            key = "avatar";
+            value = Avatar.ToString();
+            if (settings[key] == null) settings.Add(key, value);
+            else settings[key].Value = value;
+            configFile.Save(ConfigurationSaveMode.Modified);
+            //ConfigurationManager.RefreshSection(configFile.AppSettings.SectionInformation.Name);
         }
     }
 }

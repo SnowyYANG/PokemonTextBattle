@@ -80,6 +80,7 @@
     <Compile Include="Data\Rom\GameHelper.cs" />
     <Compile Include="Data\Rom\PokemonValidator.cs" />
     <Compile Include="Data\Rom\StatType.cs" />
+    <Compile Include="extensions.cs" />
     <Compile Include="IGameSettings.cs" />
     <Compile Include="Interactive\GameEvents\GameEnd.cs" />
     <Compile Include="Interactive\GameEvents\Mimic.cs" />
@@ -110,18 +111,16 @@
     <Compile Include="Client\PlayerOutward.cs" />
     <Compile Include="Client\PokemonOutward.cs" />
     <Compile Include="Models\Weather.cs" />
+    <Compile Include="ObservableList.cs" />
+    <Compile Include="ObservableObject.cs" />
+    <Compile Include="PairValue.cs" />
+    <Compile Include="PBOMarks.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Data\Rom\GameString.cs" />
     <Compile Include="Data\Rom\Pokemon\Evolution.cs" />
     <Compile Include="Data\Save\UserData.cs" />
     <Compile Include="Data\Rom\6D.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\PokemonBattleOnline\PokemonBattleOnline.csproj">
-      <Project>{ee2c451e-a61e-4634-b382-5298982e060c}</Project>
-      <Name>PokemonBattleOnline</Name>
-      <Private>False</Private>
-    </ProjectReference>
+    <Compile Include="UIDispatcher.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="dat\Evolutions.txt" />

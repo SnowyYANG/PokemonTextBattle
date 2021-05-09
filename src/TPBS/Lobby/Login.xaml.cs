@@ -37,7 +37,7 @@ namespace PokemonBattleOnline.PBO.Lobby
                   if (PBOClient.Current != null)
                   {
                       var server = servers.Text;
-                      var ss = Config.Current.Servers;
+                      var ss = Config.Servers;
                       if (ss.FirstOrDefault() != server)
                       {
                           ss.Remove(server);
@@ -48,9 +48,9 @@ namespace PokemonBattleOnline.PBO.Lobby
                       }
                   }
               };
-            var na = Config.Current.Name;
+            var na = Config.Name;
             if (na != null) name.Text = na;
-            servers.ItemsSource = Config.Current.Servers;
+            servers.ItemsSource = Config.Servers;
             servers.SelectedIndex = 0;
         }
 
@@ -66,8 +66,8 @@ namespace PokemonBattleOnline.PBO.Lobby
                 var na = name.Text.Trim();
                 var av = 0;
                 PBOClient.Login(servers.Text.Trim(), na, (ushort)av);
-                Config.Current.Name = na;
-                Config.Current.Avatar = av;
+                Config.Name = na;
+                Config.Avatar = av;
                 IsEnabled = false;
             }
         }

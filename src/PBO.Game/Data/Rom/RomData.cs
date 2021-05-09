@@ -7,7 +7,6 @@ using System.IO;
 
 namespace PokemonBattleOnline.Game
 {
-    [DataContract(Namespace = PBOMarks.PBO)]
     public static class RomData
     {
         public const int GEN = 6;

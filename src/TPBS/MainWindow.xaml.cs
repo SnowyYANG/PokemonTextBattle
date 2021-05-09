@@ -67,7 +67,7 @@ namespace PokemonBattleOnline.PBO
         protected override void OnClosed(EventArgs e)
         {
             base.OnClosed(e);
-            Config.Current.Save();
+            Config.Save();
             Application.Current.Shutdown();
         }
     }
