@@ -10,24 +10,13 @@ namespace PokemonBattleOnline
   /// </summary>
   public static class UIDispatcher
   {
-    private static System.Windows.Threading.Dispatcher wpf;
-
-    public static void Init(System.Windows.Threading.Dispatcher dispatcher)
-    {
-      wpf = dispatcher;
-    }
-
     public static void Invoke(Action action)
     {
 #if DEBUG
       try
       {
 #endif
-        if (action != null)
-        {
-          if (wpf == null || wpf.CheckAccess()) action();
-          else wpf.Invoke(action);
-        }
+            action?.Invoke();
 #if DEBUG
       }
       catch
@@ -42,11 +31,7 @@ namespace PokemonBattleOnline
       try
       {
 #endif
-        if (method != null)
-        {
-          if (wpf == null || wpf.CheckAccess()) method.DynamicInvoke(args);
-          else wpf.Invoke(method, args);
-        }
+        method?.DynamicInvoke(args);
 #if DEBUG
       }
       catch
@@ -61,11 +46,7 @@ namespace PokemonBattleOnline
       try
       {
 #endif
-        if (method != null)
-        {
-          if (wpf == null) method.DynamicInvoke(args);
-          else wpf.BeginInvoke(method, args);
-        }
+        method?.DynamicInvoke(args);
 #if DEBUG
       }
       catch

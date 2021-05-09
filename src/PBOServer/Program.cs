@@ -38,11 +38,10 @@ namespace PokemonBattleOnline.PBO.Server
                 Console.WriteLine("OK!");
 
                 PreLog("Initing taskbar notify icon");
-                new Thread(TaskbarIcon.Init).Start();
                 Console.WriteLine("OK!");
 
                 Console.WriteLine();
-                Console.WriteLine(@"Server is ready. To close server, input ""quit"" or close this window. To hide this window, click the notify icon in task.");
+                Console.WriteLine(@"Server is ready. To close server, input ""quit"" or close this window.");
                 Console.WriteLine();
 
                 LOOP:
@@ -52,7 +51,6 @@ namespace PokemonBattleOnline.PBO.Server
                 if (line.Equals("quit", StringComparison.CurrentCultureIgnoreCase))
                 {
                     PBOServer.Current.Dispose();
-                    TaskbarIcon.Close();
                     Record.UnInit();
                     return 0;
                 }

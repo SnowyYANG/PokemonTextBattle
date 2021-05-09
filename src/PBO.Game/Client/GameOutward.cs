@@ -69,7 +69,7 @@ namespace PokemonBattleOnline.Game
                 {
                     UIDispatcher.Invoke((Action<GameOutward>)e.Update, this);
 #if !TEST
-                    System.Threading.Thread.Sleep(e.Sleep);
+                    //System.Threading.Thread.Sleep(e.Sleep);
 #endif
                 }
             }

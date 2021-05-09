@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.IO;
-using System.Runtime.Remoting.Messaging;
 using PokemonBattleOnline.Game;
 using PokemonBattleOnline.Game.Host;
 
@@ -57,22 +56,13 @@ namespace PokemonBattleOnline.Network
                 sw.Write(',');
             }
         }
-        private static void Callback(IAsyncResult ar)
-        {
-            try
-            {
-                ((Action<int, InitingGame>)((AsyncResult)ar).AsyncDelegate).EndInvoke(ar);
-            }
-            catch { }
-        }
-
         public static void Add(Room room, InitingGame ig)
         {
             if (room != null && ig != null && IgPath != null)
             {
                 try
                 {
-                    ((Action<int, InitingGame>)AddInitingGameImplement).BeginInvoke(room.Id, ig, Callback, null);
+                    AddInitingGameImplement(room.Id, ig);
                 }
                 catch { }
             }
@@ -141,7 +131,7 @@ namespace PokemonBattleOnline.Network
             {
                 try
                 {
-                    ((Action<int, int>)ErrorImplement).BeginInvoke(room.Id, game.Id, Callback, null);
+                    ErrorImplement(room.Id, game.Id);
                 }
                 catch { }
             }

@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Runtime.Remoting.Messaging;
 using PokemonBattleOnline.Game;
 using PokemonBattleOnline.Network.Commands;
 
@@ -212,12 +211,6 @@ namespace PokemonBattleOnline.Network
         private IAsyncResult lastAsyncResult;
         internal void Update(GameEvent[] es)
         {
-            var d = new Action<IAsyncResult, GameEvent[]>(UpdateImplement);
-            lastAsyncResult = d.BeginInvoke(lastAsyncResult, es, UpdateImplementCallback, null);
-        }
-        private void UpdateImplement(IAsyncResult lastAsyncResult, GameEvent[] es)
-        {
-            if (lastAsyncResult != null) lastAsyncResult.AsyncWaitHandle.WaitOne();
             Game.Update(es);
             if (PlayerController != null)
             {
@@ -228,10 +221,6 @@ namespace PokemonBattleOnline.Network
                     InputRequest = null;
                 }
             }
-        }
-        private static void UpdateImplementCallback(IAsyncResult ar)
-        {
-            ((Action<IAsyncResult, GameEvent[]>)((AsyncResult)ar).AsyncDelegate).EndInvoke(ar);
         }
     }
 }

@@ -1,0 +1,232 @@
+2021-05-09 20:38:46.087 +08:00 [INF] MSBuild registered from C:\Program Files\dotnet\sdk\5.0.202\
+2021-05-09 20:38:46.625 +08:00 [INF] Registered 1 extensions:
+	Default extension
+2021-05-09 20:38:58.761 +08:00 [INF] Initializing upgrade step Select an entrypoint
+2021-05-09 20:39:20.909 +08:00 [INF] Applying upgrade step Select an entrypoint
+2021-05-09 20:39:34.618 +08:00 [INF] Upgrade step Select an entrypoint applied successfully
+2021-05-09 20:40:15.611 +08:00 [INF] Initializing upgrade step Select project to upgrade
+2021-05-09 20:40:21.316 +08:00 [INF] Applying upgrade step Select project to upgrade
+2021-05-09 20:40:38.344 +08:00 [INF] Upgrade step Select project to upgrade applied successfully
+2021-05-09 20:40:42.011 +08:00 [INF] Initializing upgrade step Back up project
+2021-05-09 20:40:48.954 +08:00 [INF] Applying upgrade step Back up project
+2021-05-09 20:40:55.709 +08:00 [INF] Backing up C:\Users\snowy\Desktop\ptb\src2\PBO.Game to C:\Users\snowy\Desktop\ptb\src2.backup\PBO.Game
+2021-05-09 20:41:00.479 +08:00 [INF] Project backed up to C:\Users\snowy\Desktop\ptb\src2.backup\PBO.Game
+2021-05-09 20:41:00.481 +08:00 [INF] Upgrade step Back up project applied successfully
+2021-05-09 20:41:08.976 +08:00 [INF] Initializing upgrade step Convert project file to SDK style
+2021-05-09 20:41:16.960 +08:00 [INF] Applying upgrade step Convert project file to SDK style
+2021-05-09 20:41:16.968 +08:00 [INF] Converting project file format with try-convert, version 0.7.217901
+2021-05-09 20:41:30.407 +08:00 [INF] [try-convert] Conversion complete!
+2021-05-09 20:41:33.727 +08:00 [INF] Project file converted successfully! The project may require additional changes to build successfully against the new .NET target.
+2021-05-09 20:41:42.045 +08:00 [INF] Upgrade step Convert project file to SDK style applied successfully
+2021-05-09 20:41:49.922 +08:00 [INF] Initializing upgrade step Clean up NuGet package references
+2021-05-09 20:41:57.304 +08:00 [WRN] No version of Microsoft.CSharp found that supports ["net40"]; leaving unchanged
+2021-05-09 20:41:57.950 +08:00 [WRN] No version of System.Data.DataSetExtensions found that supports ["net40"]; leaving unchanged
+2021-05-09 20:41:58.269 +08:00 [INF] Reference to .NET Upgrade Assistant analyzer package (Microsoft.DotNet.UpgradeAssistant.Extensions.Default.Analyzers, version 0.2.222702) needs added
+2021-05-09 20:41:58.294 +08:00 [INF] Packages to be added:
+Microsoft.DotNet.UpgradeAssistant.Extensions.Default.Analyzers, Version=0.2.222702
+2021-05-09 20:42:41.543 +08:00 [INF] Applying upgrade step Clean up NuGet package references
+2021-05-09 20:42:41.578 +08:00 [INF] Adding package reference: Microsoft.DotNet.UpgradeAssistant.Extensions.Default.Analyzers, Version=0.2.222702
+2021-05-09 20:42:50.014 +08:00 [WRN] No version of Microsoft.CSharp found that supports ["net40"]; leaving unchanged
+2021-05-09 20:42:50.050 +08:00 [WRN] No version of System.Data.DataSetExtensions found that supports ["net40"]; leaving unchanged
+2021-05-09 20:42:50.083 +08:00 [INF] Upgrade step Clean up NuGet package references applied successfully
+2021-05-09 20:43:13.574 +08:00 [INF] Initializing upgrade step Update TFM
+2021-05-09 20:43:13.602 +08:00 [INF] TFM needs updated to netstandard2.0
+2021-05-09 20:43:18.555 +08:00 [INF] Applying upgrade step Update TFM
+2021-05-09 20:43:32.330 +08:00 [INF] Updated TFM to netstandard2.0
+2021-05-09 20:43:32.335 +08:00 [INF] Upgrade step Update TFM applied successfully
+2021-05-09 20:43:38.370 +08:00 [INF] Initializing upgrade step Update NuGet Packages
+2021-05-09 20:43:42.898 +08:00 [INF] No package updates needed
+2021-05-09 20:43:42.900 +08:00 [INF] Initializing upgrade step Add template files
+2021-05-09 20:43:43.059 +08:00 [INF] 0 expected template items needed
+2021-05-09 20:43:43.093 +08:00 [INF] Initializing upgrade step Update source code
+2021-05-09 20:43:48.924 +08:00 [INF] Initializing upgrade step Move to next project
+2021-05-09 20:43:58.019 +08:00 [INF] Applying upgrade step Move to next project
+2021-05-09 20:43:58.025 +08:00 [INF] Upgrade step Move to next project applied successfully
+2021-05-09 20:44:10.505 +08:00 [INF] Initializing upgrade step Select project to upgrade
+2021-05-09 20:44:14.570 +08:00 [INF] Applying upgrade step Select project to upgrade
+2021-05-09 20:44:19.258 +08:00 [INF] Upgrade step Select project to upgrade applied successfully
+2021-05-09 20:44:23.792 +08:00 [INF] Initializing upgrade step Back up project
+2021-05-09 20:44:26.473 +08:00 [INF] Skipping upgrade step Back up project
+2021-05-09 20:44:26.481 +08:00 [INF] Upgrade step Back up project skipped
+2021-05-09 20:44:53.790 +08:00 [INF] Initializing upgrade step Convert project file to SDK style
+2021-05-09 20:44:56.925 +08:00 [INF] Applying upgrade step Convert project file to SDK style
+2021-05-09 20:44:56.933 +08:00 [INF] Converting project file format with try-convert, version 0.7.217901
+2021-05-09 20:45:04.447 +08:00 [INF] [try-convert] Conversion complete!
+2021-05-09 20:45:05.596 +08:00 [INF] Project file converted successfully! The project may require additional changes to build successfully against the new .NET target.
+2021-05-09 20:45:10.630 +08:00 [INF] Upgrade step Convert project file to SDK style applied successfully
+2021-05-09 20:45:14.786 +08:00 [INF] Initializing upgrade step Clean up NuGet package references
+2021-05-09 20:45:20.132 +08:00 [WRN] No version of Microsoft.CSharp found that supports ["net40"]; leaving unchanged
+2021-05-09 20:45:20.160 +08:00 [WRN] No version of System.Data.DataSetExtensions found that supports ["net40"]; leaving unchanged
+2021-05-09 20:45:20.171 +08:00 [INF] Reference to .NET Upgrade Assistant analyzer package (Microsoft.DotNet.UpgradeAssistant.Extensions.Default.Analyzers, version 0.2.222702) needs added
+2021-05-09 20:45:20.181 +08:00 [INF] Packages to be added:
+Microsoft.DotNet.UpgradeAssistant.Extensions.Default.Analyzers, Version=0.2.222702
+2021-05-09 20:45:23.286 +08:00 [INF] Applying upgrade step Clean up NuGet package references
+2021-05-09 20:45:23.291 +08:00 [INF] Adding package reference: Microsoft.DotNet.UpgradeAssistant.Extensions.Default.Analyzers, Version=0.2.222702
+2021-05-09 20:45:29.686 +08:00 [WRN] No version of Microsoft.CSharp found that supports ["net40"]; leaving unchanged
+2021-05-09 20:45:29.715 +08:00 [WRN] No version of System.Data.DataSetExtensions found that supports ["net40"]; leaving unchanged
+2021-05-09 20:45:29.723 +08:00 [INF] Upgrade step Clean up NuGet package references applied successfully
+2021-05-09 20:45:40.860 +08:00 [INF] Initializing upgrade step Update TFM
+2021-05-09 20:45:41.008 +08:00 [INF] TFM needs updated to netstandard2.0
+2021-05-09 20:45:43.615 +08:00 [INF] Applying upgrade step Update TFM
+2021-05-09 20:45:49.822 +08:00 [INF] Updated TFM to netstandard2.0
+2021-05-09 20:45:49.825 +08:00 [INF] Upgrade step Update TFM applied successfully
+2021-05-09 20:45:51.977 +08:00 [INF] Initializing upgrade step Update NuGet Packages
+2021-05-09 20:45:56.811 +08:00 [INF] Marking package Microsoft.CSharp for removal because it appears to be a transitive dependency
+2021-05-09 20:45:56.819 +08:00 [INF] Marking package System.Data.DataSetExtensions for removal because it appears to be a transitive dependency
+2021-05-09 20:45:56.835 +08:00 [INF] Packages to be removed:
+Microsoft.CSharp, Version=4.7.0
+System.Data.DataSetExtensions, Version=4.5.0
+2021-05-09 20:45:59.662 +08:00 [INF] Applying upgrade step Update NuGet Packages
+2021-05-09 20:45:59.671 +08:00 [INF] Removing outdated package reference: Microsoft.CSharp, Version=4.7.0
+2021-05-09 20:45:59.681 +08:00 [INF] Removing outdated package reference: System.Data.DataSetExtensions, Version=4.5.0
+2021-05-09 20:46:06.352 +08:00 [INF] Upgrade step Update NuGet Packages applied successfully
+2021-05-09 20:46:09.839 +08:00 [INF] Initializing upgrade step Add template files
+2021-05-09 20:46:09.846 +08:00 [INF] 0 expected template items needed
+2021-05-09 20:46:09.893 +08:00 [INF] Initializing upgrade step Update source code
+2021-05-09 20:46:14.682 +08:00 [INF] Initializing upgrade step Move to next project
+2021-05-09 20:46:16.662 +08:00 [INF] Applying upgrade step Move to next project
+2021-05-09 20:46:16.666 +08:00 [INF] Upgrade step Move to next project applied successfully
+2021-05-09 20:46:21.488 +08:00 [INF] Initializing upgrade step Select project to upgrade
+2021-05-09 20:46:25.023 +08:00 [INF] Applying upgrade step Select project to upgrade
+2021-05-09 20:46:27.033 +08:00 [INF] Upgrade step Select project to upgrade applied successfully
+2021-05-09 20:46:29.349 +08:00 [INF] Initializing upgrade step Back up project
+2021-05-09 20:46:31.670 +08:00 [INF] Skipping upgrade step Back up project
+2021-05-09 20:46:31.674 +08:00 [INF] Upgrade step Back up project skipped
+2021-05-09 20:46:32.945 +08:00 [INF] Initializing upgrade step Convert project file to SDK style
+2021-05-09 20:46:35.127 +08:00 [INF] Applying upgrade step Convert project file to SDK style
+2021-05-09 20:46:35.136 +08:00 [INF] Converting project file format with try-convert, version 0.7.217901
+2021-05-09 20:46:42.365 +08:00 [INF] [try-convert] Conversion complete!
+2021-05-09 20:46:43.723 +08:00 [INF] Project file converted successfully! The project may require additional changes to build successfully against the new .NET target.
+2021-05-09 20:46:48.882 +08:00 [INF] Upgrade step Convert project file to SDK style applied successfully
+2021-05-09 20:46:52.557 +08:00 [INF] Initializing upgrade step Clean up NuGet package references
+2021-05-09 20:46:58.080 +08:00 [WRN] No version of Microsoft.CSharp found that supports ["net40"]; leaving unchanged
+2021-05-09 20:46:58.113 +08:00 [WRN] No version of System.Data.DataSetExtensions found that supports ["net40"]; leaving unchanged
+2021-05-09 20:46:58.124 +08:00 [INF] Reference to .NET Upgrade Assistant analyzer package (Microsoft.DotNet.UpgradeAssistant.Extensions.Default.Analyzers, version 0.2.222702) needs added
+2021-05-09 20:46:58.130 +08:00 [INF] Packages to be added:
+Microsoft.DotNet.UpgradeAssistant.Extensions.Default.Analyzers, Version=0.2.222702
+2021-05-09 20:47:01.345 +08:00 [INF] Applying upgrade step Clean up NuGet package references
+2021-05-09 20:47:01.350 +08:00 [INF] Adding package reference: Microsoft.DotNet.UpgradeAssistant.Extensions.Default.Analyzers, Version=0.2.222702
+2021-05-09 20:47:08.265 +08:00 [WRN] No version of Microsoft.CSharp found that supports ["net40"]; leaving unchanged
+2021-05-09 20:47:08.288 +08:00 [WRN] No version of System.Data.DataSetExtensions found that supports ["net40"]; leaving unchanged
+2021-05-09 20:47:08.297 +08:00 [INF] Upgrade step Clean up NuGet package references applied successfully
+2021-05-09 20:47:11.578 +08:00 [INF] Initializing upgrade step Update TFM
+2021-05-09 20:47:11.749 +08:00 [INF] TFM needs updated to netstandard2.0
+2021-05-09 20:47:13.228 +08:00 [INF] Applying upgrade step Update TFM
+2021-05-09 20:47:20.059 +08:00 [INF] Updated TFM to netstandard2.0
+2021-05-09 20:47:20.061 +08:00 [INF] Upgrade step Update TFM applied successfully
+2021-05-09 20:47:21.457 +08:00 [INF] Initializing upgrade step Update NuGet Packages
+2021-05-09 20:47:26.465 +08:00 [INF] Marking package Microsoft.CSharp for removal because it appears to be a transitive dependency
+2021-05-09 20:47:26.470 +08:00 [INF] Marking package System.Data.DataSetExtensions for removal because it appears to be a transitive dependency
+2021-05-09 20:47:26.488 +08:00 [INF] Packages to be removed:
+Microsoft.CSharp, Version=4.7.0
+System.Data.DataSetExtensions, Version=4.5.0
+2021-05-09 20:47:28.128 +08:00 [INF] Applying upgrade step Update NuGet Packages
+2021-05-09 20:47:28.135 +08:00 [INF] Removing outdated package reference: Microsoft.CSharp, Version=4.7.0
+2021-05-09 20:47:28.143 +08:00 [INF] Removing outdated package reference: System.Data.DataSetExtensions, Version=4.5.0
+2021-05-09 20:47:35.173 +08:00 [INF] Upgrade step Update NuGet Packages applied successfully
+2021-05-09 20:47:36.296 +08:00 [INF] Initializing upgrade step Add template files
+2021-05-09 20:47:36.307 +08:00 [INF] 0 expected template items needed
+2021-05-09 20:47:36.345 +08:00 [INF] Initializing upgrade step Update source code
+2021-05-09 20:47:37.712 +08:00 [INF] Initializing upgrade step Move to next project
+2021-05-09 20:47:40.635 +08:00 [INF] Applying upgrade step Move to next project
+2021-05-09 20:47:40.642 +08:00 [INF] Upgrade step Move to next project applied successfully
+2021-05-09 20:47:45.188 +08:00 [INF] Initializing upgrade step Select project to upgrade
+2021-05-09 20:47:49.140 +08:00 [INF] Applying upgrade step Select project to upgrade
+2021-05-09 20:47:50.929 +08:00 [INF] Upgrade step Select project to upgrade applied successfully
+2021-05-09 20:47:56.347 +08:00 [INF] Initializing upgrade step Back up project
+2021-05-09 20:47:59.483 +08:00 [INF] Skipping upgrade step Back up project
+2021-05-09 20:47:59.487 +08:00 [INF] Upgrade step Back up project skipped
+2021-05-09 20:48:00.615 +08:00 [INF] Initializing upgrade step Convert project file to SDK style
+2021-05-09 20:48:01.898 +08:00 [INF] Applying upgrade step Convert project file to SDK style
+2021-05-09 20:48:01.907 +08:00 [INF] Converting project file format with try-convert, version 0.7.217901
+2021-05-09 20:48:08.952 +08:00 [INF] [try-convert] Conversion complete!
+2021-05-09 20:48:10.523 +08:00 [INF] Project file converted successfully! The project may require additional changes to build successfully against the new .NET target.
+2021-05-09 20:48:17.182 +08:00 [INF] Upgrade step Convert project file to SDK style applied successfully
+2021-05-09 20:48:17.261 +08:00 [INF] Initializing upgrade step Clean up NuGet package references
+2021-05-09 20:48:23.860 +08:00 [WRN] No version of Microsoft.CSharp found that supports ["net40"]; leaving unchanged
+2021-05-09 20:48:23.886 +08:00 [WRN] No version of System.Data.DataSetExtensions found that supports ["net40"]; leaving unchanged
+2021-05-09 20:48:23.896 +08:00 [INF] Reference to .NET Upgrade Assistant analyzer package (Microsoft.DotNet.UpgradeAssistant.Extensions.Default.Analyzers, version 0.2.222702) needs added
+2021-05-09 20:48:23.902 +08:00 [INF] Packages to be added:
+Microsoft.DotNet.UpgradeAssistant.Extensions.Default.Analyzers, Version=0.2.222702
+2021-05-09 20:48:26.592 +08:00 [INF] Applying upgrade step Clean up NuGet package references
+2021-05-09 20:48:26.599 +08:00 [INF] Adding package reference: Microsoft.DotNet.UpgradeAssistant.Extensions.Default.Analyzers, Version=0.2.222702
+2021-05-09 20:48:34.279 +08:00 [WRN] No version of Microsoft.CSharp found that supports ["net40"]; leaving unchanged
+2021-05-09 20:48:34.303 +08:00 [WRN] No version of System.Data.DataSetExtensions found that supports ["net40"]; leaving unchanged
+2021-05-09 20:48:34.314 +08:00 [INF] Upgrade step Clean up NuGet package references applied successfully
+2021-05-09 20:48:38.707 +08:00 [INF] Initializing upgrade step Update TFM
+2021-05-09 20:48:39.068 +08:00 [INF] TFM needs updated to netstandard2.0
+2021-05-09 20:48:40.941 +08:00 [INF] Applying upgrade step Update TFM
+2021-05-09 20:48:48.353 +08:00 [INF] Updated TFM to netstandard2.0
+2021-05-09 20:48:48.355 +08:00 [INF] Upgrade step Update TFM applied successfully
+2021-05-09 20:48:59.489 +08:00 [INF] Initializing upgrade step Update NuGet Packages
+2021-05-09 20:49:04.911 +08:00 [INF] Marking package Microsoft.CSharp for removal because it appears to be a transitive dependency
+2021-05-09 20:49:04.917 +08:00 [INF] Marking package System.Data.DataSetExtensions for removal because it appears to be a transitive dependency
+2021-05-09 20:49:04.930 +08:00 [INF] Packages to be removed:
+Microsoft.CSharp, Version=4.7.0
+System.Data.DataSetExtensions, Version=4.5.0
+2021-05-09 20:49:06.653 +08:00 [INF] Applying upgrade step Update NuGet Packages
+2021-05-09 20:49:06.662 +08:00 [INF] Removing outdated package reference: Microsoft.CSharp, Version=4.7.0
+2021-05-09 20:49:06.670 +08:00 [INF] Removing outdated package reference: System.Data.DataSetExtensions, Version=4.5.0
+2021-05-09 20:49:14.363 +08:00 [INF] Upgrade step Update NuGet Packages applied successfully
+2021-05-09 20:49:23.492 +08:00 [INF] Initializing upgrade step Add template files
+2021-05-09 20:49:23.498 +08:00 [INF] 0 expected template items needed
+2021-05-09 20:49:23.589 +08:00 [INF] Initializing upgrade step Update source code
+2021-05-09 20:49:24.842 +08:00 [INF] Initializing upgrade step Move to next project
+2021-05-09 20:49:26.453 +08:00 [INF] Applying upgrade step Move to next project
+2021-05-09 20:49:26.459 +08:00 [INF] Upgrade step Move to next project applied successfully
+2021-05-09 20:49:29.342 +08:00 [INF] Initializing upgrade step Select project to upgrade
+2021-05-09 20:49:32.033 +08:00 [INF] Applying upgrade step Select project to upgrade
+2021-05-09 20:49:33.288 +08:00 [INF] Upgrade step Select project to upgrade applied successfully
+2021-05-09 20:49:34.735 +08:00 [INF] Initializing upgrade step Back up project
+2021-05-09 20:49:37.219 +08:00 [INF] Skipping upgrade step Back up project
+2021-05-09 20:49:37.223 +08:00 [INF] Upgrade step Back up project skipped
+2021-05-09 20:49:39.380 +08:00 [INF] Initializing upgrade step Convert project file to SDK style
+2021-05-09 20:49:40.962 +08:00 [INF] Applying upgrade step Convert project file to SDK style
+2021-05-09 20:49:40.967 +08:00 [INF] Converting project file format with try-convert, version 0.7.217901
+2021-05-09 20:49:43.039 +08:00 [INF] [try-convert] C:\Users\snowy\Desktop\ptb\src2\PBOServer\PBOServer.csproj contains an App.config file. App.config is replaced by appsettings.json in .NET Core. You will need to delete App.config and migrate to appsettings.json if it's applicable to your project.
+2021-05-09 20:49:47.794 +08:00 [INF] [try-convert] Conversion complete!
+2021-05-09 20:49:49.576 +08:00 [INF] Project file converted successfully! The project may require additional changes to build successfully against the new .NET target.
+2021-05-09 20:49:56.500 +08:00 [INF] Upgrade step Convert project file to SDK style applied successfully
+2021-05-09 20:50:07.563 +08:00 [INF] Initializing upgrade step Clean up NuGet package references
+2021-05-09 20:50:13.808 +08:00 [WRN] No version of Microsoft.CSharp found that supports ["net40"]; leaving unchanged
+2021-05-09 20:50:13.841 +08:00 [WRN] No version of System.Data.DataSetExtensions found that supports ["net40"]; leaving unchanged
+2021-05-09 20:50:13.860 +08:00 [INF] Reference to .NET Upgrade Assistant analyzer package (Microsoft.DotNet.UpgradeAssistant.Extensions.Default.Analyzers, version 0.2.222702) needs added
+2021-05-09 20:50:13.874 +08:00 [INF] Packages to be added:
+Microsoft.DotNet.UpgradeAssistant.Extensions.Default.Analyzers, Version=0.2.222702
+2021-05-09 20:50:20.098 +08:00 [INF] Applying upgrade step Clean up NuGet package references
+2021-05-09 20:50:20.106 +08:00 [INF] Adding package reference: Microsoft.DotNet.UpgradeAssistant.Extensions.Default.Analyzers, Version=0.2.222702
+2021-05-09 20:50:28.263 +08:00 [WRN] No version of Microsoft.CSharp found that supports ["net40"]; leaving unchanged
+2021-05-09 20:50:28.283 +08:00 [WRN] No version of System.Data.DataSetExtensions found that supports ["net40"]; leaving unchanged
+2021-05-09 20:50:28.294 +08:00 [INF] Upgrade step Clean up NuGet package references applied successfully
+2021-05-09 20:50:39.044 +08:00 [INF] Initializing upgrade step Update TFM
+2021-05-09 20:50:39.485 +08:00 [INF] TFM needs updated to net5.0-windows
+2021-05-09 20:50:41.505 +08:00 [INF] Applying upgrade step Update TFM
+2021-05-09 20:51:04.288 +08:00 [INF] Updated TFM to net5.0-windows
+2021-05-09 20:51:04.291 +08:00 [INF] Upgrade step Update TFM applied successfully
+2021-05-09 20:51:05.195 +08:00 [INF] Initializing upgrade step Update NuGet Packages
+2021-05-09 20:51:11.434 +08:00 [INF] Marking package Microsoft.CSharp for removal because it appears to be a transitive dependency
+2021-05-09 20:51:11.453 +08:00 [INF] Marking package System.Data.DataSetExtensions for removal because it appears to be a transitive dependency
+2021-05-09 20:51:12.441 +08:00 [INF] Adding Microsoft.Windows.Compatibility 5.0.2
+2021-05-09 20:51:12.450 +08:00 [INF] Packages to be removed:
+Microsoft.CSharp, Version=4.7.0
+System.Data.DataSetExtensions, Version=4.5.0
+2021-05-09 20:51:12.455 +08:00 [INF] Packages to be added:
+Microsoft.Windows.Compatibility, Version=5.0.2
+2021-05-09 20:51:29.672 +08:00 [INF] Applying upgrade step Update NuGet Packages
+2021-05-09 20:51:29.680 +08:00 [INF] Removing outdated package reference: Microsoft.CSharp, Version=4.7.0
+2021-05-09 20:51:29.689 +08:00 [INF] Removing outdated package reference: System.Data.DataSetExtensions, Version=4.5.0
+2021-05-09 20:51:29.700 +08:00 [INF] Adding package reference: Microsoft.Windows.Compatibility, Version=5.0.2
+2021-05-09 20:52:01.453 +08:00 [INF] Upgrade step Update NuGet Packages applied successfully
+2021-05-09 20:52:04.379 +08:00 [INF] Initializing upgrade step Add template files
+2021-05-09 20:52:04.419 +08:00 [INF] 0 expected template items needed
+2021-05-09 20:52:04.423 +08:00 [INF] Initializing upgrade step Upgrade app config files
+2021-05-09 20:52:04.535 +08:00 [INF] Found 0 app settings for upgrade: 
+2021-05-09 20:52:04.654 +08:00 [INF] Initializing upgrade step Update source code
+2021-05-09 20:52:06.706 +08:00 [INF] Initializing upgrade step Move to next project
+2021-05-09 20:52:09.417 +08:00 [INF] Applying upgrade step Move to next project
+2021-05-09 20:52:09.426 +08:00 [INF] Upgrade step Move to next project applied successfully
+2021-05-09 20:52:12.053 +08:00 [INF] Initializing upgrade step Finalize upgrade
+2021-05-09 20:52:14.964 +08:00 [INF] Applying upgrade step Finalize upgrade
+2021-05-09 20:52:14.974 +08:00 [INF] Upgrade step Finalize upgrade applied successfully
+2021-05-09 20:52:17.275 +08:00 [INF] Upgrade has completed. Please review any changes.
+2021-05-09 20:52:17.283 +08:00 [INF] Saving upgrade progress file at C:\Users\snowy\Desktop\ptb\src2\.upgrade-assistant
