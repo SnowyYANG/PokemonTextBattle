@@ -63,6 +63,7 @@ namespace PokemonBattleOnline.PBO.Editor
               {
                   var m = (LearnedMove)_m;
                   EditorVM.Current.EditingPokemon.RemoveMove(m.Move);
+                  if (m.Move.Id == Ms.SECRET_SWORD) EditorVM.Current.EditingPokemon.OnPropertyChanged("PokemonForm");
               });
             PPUpChangeCommand = new SimpleCommand((_m) =>
               {
@@ -112,7 +113,6 @@ namespace PokemonBattleOnline.PBO.Editor
                             _stats = new PokemonEditor6D(m);
                             m.Iv.PropertyChanged += (sender, e) => OnPropertyChanged("HiddenPowerType");
                             m.Ev.PropertyChanged += (sender, e) => RefreshRemainingEv();
-                            RefreshImage();
                             RefreshLearnset();
                             RefreshOptionalVisibility();
                             RefreshRemainingEv();
@@ -151,7 +151,6 @@ namespace PokemonBattleOnline.PBO.Editor
                     Model.Form = value;
                     if (oldNumber != value.Species.Number || oldNumber == Ps.WORMADAM || oldNumber == Ps.ROTOM || oldNumber == Ps.KYUREM || oldNumber == Ps.FLOETTE && dataChanged || oldNumber == Ps.MEOWSTIC) RefreshLearnset();
                     if (dataChanged) Stats.RefreshAll();
-                    RefreshImage();
                     OnPropertyChanged();
                 }
             }
@@ -175,7 +174,6 @@ namespace PokemonBattleOnline.PBO.Editor
                         }
                     }
                     OnPropertyChanged("Gender");
-                    RefreshImage();
                 }
             }
         }
@@ -190,7 +188,6 @@ namespace PokemonBattleOnline.PBO.Editor
                     Model.Item = value;
                     if (form != PokemonForm)
                     {
-                        RefreshImage();
                         OnPropertyChanged("PokemonForm");
                         if (form.Data != PokemonForm.Data) Stats.RefreshAll();
                     }
@@ -307,13 +304,6 @@ namespace PokemonBattleOnline.PBO.Editor
             return vm;
         }
 
-        private BitmapImage _image;
-        public BitmapImage Image
-        { get { return _image; } }
-        private void RefreshImage()
-        {
-        }
-
         private Visibility _hiddenPowerVisibility;
         public Visibility HiddenPowerVisibility
         { get { return _hiddenPowerVisibility; } }
@@ -375,7 +365,7 @@ namespace PokemonBattleOnline.PBO.Editor
             {
                 RefreshOptionalVisibility();
                 _learnset[m.Id].IsLearned = false;
-                if (m.Id == Ms.SECRET_SWORD && PokemonSpecies.Number == Ps.KELDEO) RefreshImage();
+                //if (m.Id == Ms.SECRET_SWORD && PokemonSpecies.Number == Ps.KELDEO) RefreshImage();
             }
         }
 

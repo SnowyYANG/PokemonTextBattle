@@ -43,13 +43,13 @@ namespace PokemonBattleOnline.PBO.Editor
         {
             var t = new TeamVM(new PokemonTeam());
             TeamVM.New = t;
-            _teams.Insert(1, t);
+            _teams.Insert(0, t);
         }
         public void ImportTeam(string text)
         {
             var t = new TeamVM(UserData.ImportTeam(text));
             TeamVM.New = t;
-            _teams.Insert(1, t);
+            _teams.Insert(0, t);
         }
 
         public bool Save()

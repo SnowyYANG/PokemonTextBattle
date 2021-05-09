@@ -101,6 +101,11 @@ namespace PokemonBattleOnline.Game
             else _forms[index].Data = data;
         }
 
+        public static readonly int[] CAN_CHOOSE_FORM = { Ps.UNOWN, Ps.DEOXYS, Ps.BURMY, Ps.WORMADAM, Ps.SHELLOS, Ps.GASTRODON, Ps.ROTOM, Ps.SHAYMIN, Ps.BASCULIN, Ps.DEERLING, Ps.SAWSBUCK, Ps.TORNADUS, Ps.THUNDURUS, Ps.LANDORUS, Ps.KYUREM, Ps.VIVILLON, Ps.FLABEBE, Ps.FLOETTE, Ps.FLORGES, Ps.FURFROU, Ps.PUMPKABOO, Ps.GOURGEIST, Ps.HOOPA };
+        private static readonly int[] SP_FORM = { Ps.ARCEUS, Ps.GIRATINA, Ps.GENESECT, Ps.KELDEO, Ps.MEOWSTIC };
+        public bool EditorFormVisible
+        { get { return CAN_CHOOSE_FORM.Contains(Number) || SP_FORM.Contains(Number); } }
+
         public PokemonForm GetForm(int index)
         {
             return _forms.ValueOrDefault(index);

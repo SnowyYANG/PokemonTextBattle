@@ -54,9 +54,8 @@ namespace PokemonBattleOnline.Game
             }
         }
 
-        private static readonly int[] CAN_CHOOSE_FORM = { Ps.UNOWN, Ps.DEOXYS, Ps.BURMY, Ps.WORMADAM, Ps.SHELLOS, Ps.GASTRODON, Ps.ROTOM, Ps.SHAYMIN, Ps.BASCULIN, Ps.DEERLING, Ps.SAWSBUCK, Ps.TORNADUS, Ps.THUNDURUS, Ps.LANDORUS, Ps.KYUREM, Ps.VIVILLON, Ps.FLABEBE, Ps.FLOETTE, Ps.FLORGES, Ps.FURFROU, Ps.PUMPKABOO, Ps.GOURGEIST, Ps.HOOPA };
         public bool CanChooseForm
-        { get { return CAN_CHOOSE_FORM.Contains(number) || number == Ps.KELDEO && HasMove(Ms.SECRET_SWORD); } }
+        { get { return PokemonSpecies.CAN_CHOOSE_FORM.Contains(number) || number == Ps.KELDEO && HasMove(Ms.SECRET_SWORD); } }
 
         private PokemonForm _form;
         public PokemonForm Form
@@ -76,10 +75,9 @@ namespace PokemonBattleOnline.Game
                 {
                     _form = null;
                     var oldNumber = number;
-                    var oldForm = form;
 
                     number = value.Species.Number;
-                    form = (byte)value.Index;
+                    form = value.Index;
                     CheckSpForm();
 
                     if (oldNumber != number)
@@ -88,7 +86,7 @@ namespace PokemonBattleOnline.Game
                         _gender = value.Species.Genders.First();
                         _ev.SetAll(0);
                         _lv = 0;
-                        _nature = default(PokemonNature);
+                        _nature = default;
                         Iv.SetAll(31);
                         _happiness = 0;
                         _item = 0;

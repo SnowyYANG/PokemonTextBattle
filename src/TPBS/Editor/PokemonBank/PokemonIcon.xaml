@@ -28,7 +28,7 @@
         </ContextMenu>
     </UserControl.ContextMenu>
     <UserControl.ToolTip>
-        <ToolTip DataContext="{Binding Model}">
+        <ToolTip DataContext="{Binding PlacementTarget.DataContext.Model,RelativeSource={RelativeSource Self}}">
             <StackPanel>
                 <TextBlock Text="{Binding Name}" FontWeight="Bold"/>
                 <TextBlock Text="{Binding Moves[0].Move.Id, Converter={x:Static c:MoveString.C}}"/>

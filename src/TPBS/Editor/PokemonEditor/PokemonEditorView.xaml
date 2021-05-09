@@ -101,19 +101,6 @@
     </UserControl.Resources>
     <Grid Margin="0,18,0,0">
         <Button Click="Close_Click" ToolTip="关闭" Style="{StaticResource XButton}" Foreground="#b0b0b0" Background="White" BorderBrush="White" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,-24,3,0"/>
-        <Image Opacity="0.3" Source="{Binding Image}" Height="{Binding Image.PixelHeight}" Width="{Binding Image.PixelWidth}" MouseMove="Image_MouseMove" MouseLeave="Image_MouseLeave" MouseLeftButtonDown="Image_MouseLeftButtonDown" HorizontalAlignment="Center" VerticalAlignment="Top">
-            <Image.Style>
-                <Style TargetType="Image">
-                    <Setter Property="Margin" Value="0,0,100,0"/>
-                    <Style.Triggers>
-                        <Trigger Property="Height" Value="96">
-                            <Setter Property="Margin" Value="0,75,100,0"/>
-                        </Trigger>
-                    </Style.Triggers>
-                </Style>
-            </Image.Style>
-        </Image>
-        
         <Grid DataContext="{Binding PokemonForm.Data}" Width="100" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,100,0,0">
             <Grid.Style>
                 <Style TargetType="Grid">
@@ -301,23 +288,18 @@
             <Grid Margin="0,24,0,0" Grid.Row="2">
                 <Grid.Style>
                     <Style TargetType="Grid">
-                        <Setter Property="Visibility" Value="Collapsed"/>
                         <Style.Triggers>
-                            <DataTrigger Binding="{Binding Model.CanChooseForm}" Value="True">
-                                <Setter Property="Visibility" Value="Visible"/>
+                            <DataTrigger Binding="{Binding PokemonSpecies.EditorFormVisible}" Value="False">
+                                <Setter Property="Visibility" Value="Collapsed"/>
                             </DataTrigger>
                         </Style.Triggers>
                     </Style>
                 </Grid.Style>
                 <Label Content="形态"/>
-                <ComboBox SelectedItem="{Binding PokemonForm}" ItemsSource="{Binding PokemonSpecies.Forms}">
+                <ComboBox SelectedItem="{Binding PokemonForm}" IsEnabled="{Binding Model.CanChooseForm}" ItemsSource="{Binding PokemonSpecies.Forms}">
                     <ComboBox.ItemTemplate>
                         <DataTemplate>
-                            <TextBlock Text="{Binding Converter={x:Static c:PokemonFormShortString.C}}">
-                                <TextBlock.ToolTip>
-                                    <Image Source="{Binding Converter={x:Static c:PokemonFormIcon.C}}" Height="30" Width="40"/>
-                                </TextBlock.ToolTip>
-                            </TextBlock>
+                            <TextBlock Text="{Binding Converter={x:Static c:PokemonFormShortString.C}}"/>
                         </DataTemplate>
                     </ComboBox.ItemTemplate>
                 </ComboBox>
@@ -465,13 +447,13 @@
             </ListView.View>
         </ListView>
         
-        <StackPanel DataContext="{Binding Origin.Container}" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,-21,0,0">
+        <StackPanel DataContext="{Binding Origin.Container}" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,-18,0,0">
             <StackPanel.Resources>
                 <Style TargetType="ContentControl">
                     <Setter Property="ContentTemplate">
                         <Setter.Value>
                             <DataTemplate>
-                                <Image Name="icon" Source="{Binding Icon}" Opacity="0.5" Cursor="Hand" Height="32" Width="32"/>
+                                <TextBlock Name="icon" Text="{Binding Icon[0]}" Cursor="Hand" Padding="4"/>
                                 <DataTemplate.Triggers>
                                     <DataTrigger Binding="{Binding IsEditing}" Value="True">
                                         <Setter TargetName="icon" Property="Opacity" Value="1"/>

@@ -6,13 +6,14 @@
              Background="Transparent" AllowDrop="True">
     <Grid>
         <StackPanel Orientation="Horizontal" VerticalAlignment="Top">
-            <Button Content="新建队伍" Click="NewTeam_Click" Foreground="#060" BorderBrush="#060"/>
-            <Button Content="从剪贴板导入" Click="PasteTeam_Click" Foreground="#333"/>
+            <Button Content="新建队伍" Width="80" Margin="3,0" Click="NewTeam_Click" Foreground="#060" BorderBrush="#060"/>
+            <Button Content="从剪贴板导入" Margin="3,0" Click="PasteTeam_Click" Foreground="#333"/>
         </StackPanel>
         <ListView Margin="0,20,0,0" ItemsSource="{Binding Teams}">
             <ListView.Resources>
                 <Style TargetType="ListViewItem">
                     <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                    <Setter Property="Foreground" Value="Black"/>
                 </Style>
             </ListView.Resources>
             <ListView.View>

@@ -97,6 +97,8 @@ namespace PokemonBattleOnline.PBO.Editor
                         _container[_index + 1].Model = null;
                         if (EditorVM.Current.EditingPokemon != null && EditorVM.Current.EditingPokemon.Origin == _container[_index + 1]) EditorVM.Current.EditingPokemon.Origin = this;
                         Model.PropertyChanged += Model_PropertyChanged;
+                        Model.Ev.PropertyChanged += Model_PropertyChanged;
+                        ((ObservableCollection<LearnedMove>)Model.Moves).CollectionChanged += PokemonVM_CollectionChanged;
                     }
                     OnPropertyChanged();
                 }
@@ -105,6 +107,8 @@ namespace PokemonBattleOnline.PBO.Editor
                     _container.Model.Pokemons[_index] = value;
                     if (_index < 5) _container[_index + 1].OnPropertyChanged("Icon");
                     Model.PropertyChanged += Model_PropertyChanged;
+                    Model.Ev.PropertyChanged += Model_PropertyChanged;
+                    ((ObservableCollection<LearnedMove>)Model.Moves).CollectionChanged += PokemonVM_CollectionChanged;
                     OnPropertyChanged();
                 }
             }
