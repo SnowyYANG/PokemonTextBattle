@@ -9,3 +9,5 @@ Currently the project language is Chinese only, we may support English in the fu
 
 运行TPBS和PBOServer时，编译选项选择Debug或Release。
 运行PBO.Test，编译选项选择Test。
+
+欢迎连接常开服务器snowy.asia。
